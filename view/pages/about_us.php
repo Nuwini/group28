@@ -9,7 +9,7 @@ include('../../model/config.php');
 <title>UCSC</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
-<!-- 3 Column Stylesheet Added To The Page And Not To The Layout.css -->
+<!-- 3 Column Stylesheet Added To The Page And Not To the Layout.css -->
 <link rel="stylesheet" href="../layout/styles/3_column.css" type="text/css" />
 </head>
 <body id="top">
