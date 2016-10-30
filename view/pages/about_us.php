@@ -13,41 +13,8 @@ include('../../model/config.php');
 <link rel="stylesheet" href="../layout/styles/3_column.css" type="text/css" />
 </head>
 <body id="top">
-<div class="wrapper row1">
-  <div id="topnav">
-    <ul>
-      <li class="active"><a href="../../index.html"><strong>Home</strong></a></li>
-      <li><a href="3-columns.html"><strong>About Us</strong></a></li>
-      <li><a href="full-width1.html"><strong>Academic Programmes</strong></a></li>
-      <li><a href=""><strong>People</strong></a></li>
-      <li><a href="gallery.html"><strong>Gallery</strong></a></li>
-      <li><a href="infrastructure_and_services.html"><strong>Services</strong></a></li>
-      <li><a href="#"><strong>News/Notices</strong></a></li>
-      <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
-    </ul>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row2">
-  <div id="header" class="clear"><span class="img">
-    <h1><a href="index.html"><img src="../images/demo/logo-ucsc-1.png"/></a></h1>
-  </span>
-    <div class="img">
-      <h1>&nbsp;</h1>
-      <p></p>
-    </div>
-    <div class="fl_right">
-      <form action="#" method="post" id="sitesearch">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" />
-          <input type="image" src="../images/demo/search.gif" id="search" alt="Search" />
-        </fieldset>
-      </form>
-      <p><a href="#">Site Map</a> | <a href="login_index.html">Login</a></p>
-    </div>
-  </div>
-</div>
+
+ <?php include('../layout/styles/header.php');?>
 <!-- ####################################################################################################### -->
 <div class="wrapper row4">
   <div id="quicknav" class="clear">
@@ -195,6 +162,7 @@ include('../../model/config.php');
   </div>
 </div>
 <!-- ####################################################################################################### -->
+<<<<<<< 7a268ff36bbcfee1f7c05cef862e5fd726034927
 <div class="wrapper">
   <div id="academiclinks" class="clear">
     <div class="linkbox">
@@ -283,5 +251,8 @@ include('../../model/config.php');
     <!-- ####################################################################################################### --> 
   </div>
 </div>
+=======
+<?php include('../layout/styles/footer.php');?>
+>>>>>>> views & achievements
 </body>
 </html>

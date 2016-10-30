@@ -1,9 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
+ 
 <head>
+
 <title>UCSC</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
 <link rel="stylesheet" href="view/layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="view/layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="view/layout/scripts/jquery-s3slider.js"></script>
@@ -21,12 +24,12 @@ $(document).ready(function() {
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.html"><strong>Home</strong></a></li>
-      <li><a href="view/pages/about_us.html"><strong>About Us</strong></a></li>
-      <li><a href="view/pages/full-width1.html"><strong>Alumni</strong></a></li>
-      <li><a href="view/pages/3-columns1.html"><strong>People</strong></a></li>
+      <li><a href="view/pages/about_us.php"><strong>About Us</strong></a></li>
+      <li><a href="view/pages/full-width1.html"><strong>Education</strong></a></li>
+      <li><a href="view/pages/profile.php"><strong>People</strong></a></li>
       <li><a href="view/pages/gallery.html"><strong>Gallery</strong></a></li>
       <li><a href="view/pages/gallery1.html"><strong>Services</strong></a></li>
-      <li><a href="#"><strong>News/Notices</strong></a></li>
+      <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
       <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
     </ul>
   </div>
@@ -260,5 +263,6 @@ $(document).ready(function() {
     <!-- ####################################################################################################### --> 
   </div>
 </div>
+
 </body>
 </html>

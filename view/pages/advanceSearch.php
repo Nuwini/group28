@@ -4,9 +4,6 @@ include 'searchContent.php';
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +37,7 @@ include 'searchContent.php';
 <div class="wrapper row2">
   <div id="header" class="clear" style="padding-bottom:100px">
     <div class="img">
-      <h1><a href="index.html"><img src="../view/images/demo/logo-ucsc-1.png"/></a></h1>
+      <h1><a href="../../index.php"><img src="../images/demo/logo-ucsc-1.png"/></a></h1>
  
 	</div>
 

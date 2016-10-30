@@ -81,7 +81,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Division</a></div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=divi">Division</a></div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -92,7 +92,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="staff_center_back.php?type=centers">Centres</a></div>
+        <div class="wp-menu-name">Centres</a></div>
 
     </a>
 </li>
@@ -115,7 +115,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="staff_center_back.php?type=publication">Publication</div>
+        <div class="wp-menu-name">Publication</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -137,7 +137,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="staff_center_back.php?type=payment">Payment</div>
+        <div class="wp-menu-name">Payment</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">

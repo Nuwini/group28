@@ -92,7 +92,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="staff_center_back.php?type=centers">Centres</a></div>
+        <div class="wp-menu-name">Centres</a></div>
 
     </a>
 </li>
@@ -148,7 +148,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Posts</div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=post">Posts</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -159,7 +159,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Reservations</div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=reservation">Reservations</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
