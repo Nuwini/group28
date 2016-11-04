@@ -46,7 +46,12 @@ $userid = $_SESSION['login_user'];
                 $record = mysqli_fetch_assoc($result);
             
         ?>
-        
+
+		
+
+		
+
+	
                 
                 
                 
@@ -76,7 +81,7 @@ $userid = $_SESSION['login_user'];
                                 <td><div class="form-group">
                                     <label for="full_name" class="col-lg-5 control-label">Full Name :</label><br /><br/>
                                     <label for="f_name" class="col-lg-5 control-label">First Name</label><br />
-                                        <input required id="f_name" type="text" name="f_name" class="form-control" value="<?php echo $record['f_name']?>" style="width:400px"></div>
+                                        <inputrequired id="f_name" type="text" name="f_name" class="form-control" value="<?php echo $record['f_name']?>" style="width:400px"></div>
                                     </td>
                                 
                                 <td><br /><br/><div class="form-group">
@@ -97,8 +102,8 @@ $userid = $_SESSION['login_user'];
                                  
                                 <td><div class="form-group"> 
                                 <label for="nic" class="col-sm-5 control-label">NIC : </label><br /><br/>
-                                    <input required id="nic" type="text" name="nic" class="form-control" value="<?php echo $record['nic']?>" style="width:400px"></div></td>
-                            </tr>
+                                    <input maxlength="10" required id="nic" type="text" name="nic" class="form-control" value="<?php echo $record['nic']?>" style="width:400px"></div></td>
+                            </tr> 
                             
                             <tr>
                                 <td><div class="form-group">
@@ -120,16 +125,18 @@ $userid = $_SESSION['login_user'];
                              <tr>
                                  <td><div class="form-group">
                                  <label for="contactno_1" class="col-sm-5 control-label">Contact no 1 :</label><br />
-                                     <input required id="contactno_1" type="text" name="contactno_1" class="form-control" value="<?php echo $record['contact_no1']?>" style="width:400px"></div></td>
+                                     <input maxlength="12" required id="contactno_1" type="text" name="contactno_1" class="form-control" value="<?php echo $record['contact_no1']?>" style="width:400px"></div></td>
                                  <td><div class="form-group">
                                  <label for="contactno_2" class="col-sm-5 control-label">Contact no 2 :</label><br />
-                                     <input required id="contactno_2" type="text" name="contactno_2" class="form-control" value="<?php echo $record['contact_no2']?>" style="width:400px"></div></td>
+                                     <input maxlength="12" required id="contactno_2" type="text" name="contactno_2" class="form-control" value="<?php echo $record['contact_no2']?>" style="width:400px"></div></td>
                             </tr>
                             
                              <tr>
                                  <td colspan="2"><div class="form-group">
                                  <label for="designation" class="col-sm-5 control-label">Designation :</label><br /><br/>
-                                     <input required id="designation" type="text" name="designation" class="form-control" value="<?php echo $record['designation']?>" style="width:400px"></div></td>
+                                     <input required id="designation" type="text" name="designation" class="form-control" value="<?php echo $record['designation']?>" style="width:400px">
+									 
+									 </div></td>
                             </tr>
                             
                              <tr>

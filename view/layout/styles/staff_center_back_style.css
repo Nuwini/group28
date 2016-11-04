@@ -287,3 +287,10 @@ ul {
 .logo {
 	margin-left:20px;
 }
+
+.delete{
+	z-index:5;
+	margin-right:100px;
+	float: right;
+	margin-top:6px;
+}

@@ -1,4 +1,8 @@
 <?php 
+	include('../model/config.php');
+?>
+
+<?php
 
 $output1 = "";
 $output2 = "";
@@ -55,7 +59,6 @@ if(isset($_POST['searchText'])){
 
 					$query = mysqli_query($connect,"SELECT * FROM post WHERE date_posted='$date'") or die("could not search");
 					$count = mysqli_num_rows($query);
-
 					if($count == 0 ){
 						$output1 =  "there was no search results";
 					}

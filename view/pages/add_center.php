@@ -21,18 +21,16 @@
         
         
         <?php
-        
-                   
-        $result=mysqli_query($connect, "SELECT count(*) as total from centers");
-		
-		$rows=mysqli_num_rows($result);
-        $rows++;
-        $cid = "C000" . $rows;
+        $result=mysqli_query($connect, "SELECT count(*) as total from centers"); 
+		$count = mysqli_fetch_assoc($result)['total']; 
+		$count++; 
+		$cid = "C000" . strval($count);
+                 
         ?> 
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Centers</h2>
-        <form   method="post" action="">
+        <form method="post" action="../../controller/centres.php">
             
             <div class="form-group">
                 <label for="id" class="col-sm-6 control-label">Center ID</label>

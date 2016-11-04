@@ -58,7 +58,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-media">
             <br>
         </div>
-        <div class="wp-menu-name">Statistics</a></div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=stats">Statistics</a></div>
     </a>
 </li>
 
@@ -70,7 +70,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-media">
             <br>
         </div>
-        <div class="wp-menu-name">Department</a></div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=dep">Department</a></div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -81,7 +81,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Division</a></div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=divi">Division</a></div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -104,7 +104,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Facility</div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=facility">Facility</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -148,7 +148,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Posts</div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=post">Posts</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -214,16 +214,16 @@ include '../../controller/del.php';
 		}
 
 		else if($_GET['type'] == 'dep'){
-				require "adddepartment.php";
+				require "add_department.php";
 		}
 		else if($_GET['type'] == 'divi'){
 				require "adddivision.php";
 		}
 		else if($_GET['type'] == 'centers'){
-				require "addcenter.php";
+				require "add_center.php";
 		}
 		else if($_GET['type'] == 'facility'){
-				require "addfacility.php";
+				require "add_facility.php";
 		}
 		else if($_GET['type'] == 'publication'){
 				require "addpublication.php";

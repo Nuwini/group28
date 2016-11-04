@@ -11,7 +11,8 @@
                 $website= $_POST['website'];
                 $image=$_POST['image'];
                
-                $sql = "INSERT INTO centers (center_id,center_name,center_location,center_coordinator,center_telephone,center_fax,center_email,website,image) VALUES ('$id','$name','$location','$cocordinator',' $telephone','$fax','$email','$website','$image')";
+                $sql = "INSERT INTO centers (center_id,center_name,center_location,center_coordinator,center_telephone,center_fax,center_email,website,image) 
+VALUES ('$id','$name','$location','$cocordinator',' $telephone','$fax','$email','$website','$image')";
 				
                 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';

@@ -2,7 +2,7 @@
   <div id="topnav">
     <ul>
       <li class="active"><a href="../../index.php"><strong>Home</strong></a></li>
-      <li><a href="view/pages/about_us.php"><strong>About Us</strong></a></li>
+      <li><a href="about_us.php"><strong>About Us</strong></a></li>
       <li><a href="view/pages/full-width1.html"><strong>Education</strong></a></li>
       <li><a href="view/pages/profile.php"><strong>People</strong></a></li>
       <li><a href="view/pages/gallery.html"><strong>Gallery</strong></a></li>

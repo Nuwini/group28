@@ -19,20 +19,18 @@
     </head>
     <body>
         
-        
-         <?php
-        
-                   
-        $result=mysqli_query($connect, "SELECT count(*) as total from facilities");
-        $count = mysqli_num_rows($result);
-		$count++;
-        $fid = "F000" .$count;
-        ?> 
+        <?php 
+		
+		$result=mysqli_query($connect, "SELECT count(*) as total from facilities"); 
+		$count = mysqli_fetch_assoc($result)['total']; 
+		$count++; 
+		$fid = "F000" . strval($count); ?>
+         
         
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Add facility</h2>
-        <form   method="post" action="">
+        <form   method="post" action="../../controller/facility.php">
             <div class="form-group">
             <label for="id" class="col-sm-6 control-label">Facility ID</label>
                 <div class="col-sm-5">

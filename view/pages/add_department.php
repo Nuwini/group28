@@ -20,15 +20,14 @@
     </head>
     <body>
         
-        
-         <?php
-        
-                  
-        $result=mysqli_query($connect, "SELECT count(*) as total from department");
-		$rows=mysqli_num_rows($result);
-        $rows++;
-        $did = "D000" . $rows;
+        <?php
+        $result=mysqli_query($connect, "SELECT count(*) as total from department"); 
+		$count = mysqli_fetch_assoc($result)['total']; 
+		$count++; 
+		$did = "D000" . strval($count);
+                 
         ?> 
+         
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Department</h2>
@@ -98,7 +97,7 @@
             </div>
             <div class="form-group">
 				<div class="col-sm-5">
-            <button type="submit" class="btn btn-default" style="margin-left:-133px;">Submit</button>
+            <button type="submit" class="btn btn-default" style="margin-left:535px;">Submit</button>
 			</div>
               
             </form>

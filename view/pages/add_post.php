@@ -18,19 +18,6 @@
         <?php
         
             if($_SERVER["REQUEST_METHOD"] == "POST") {
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                /*echo "connected successfully";*/
                 
                 $uid = $_POST['uid'];
                 $dposted = $_POST['dposted'];
@@ -38,8 +25,11 @@
                 $posts= $_POST['posts'];
                
                 $sql = "INSERT INTO post (user_id,date_posted,headline_post,post) VALUES ('$uid','$dposted','$hpost','$posts')";
-                if (mysqli_query($conn, $sql)) {
-                    echo "insert successful";
+                if (mysqli_query($connect,$sql)) {
+                    echo '<script type="text/javascript">';
+					echo 'alert("A new post added successfully!");';
+                    echo 'window.location="staff_center_back.php";';
+					echo '</script>';
 				} else {
                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 } 

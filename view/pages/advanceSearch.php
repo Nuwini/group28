@@ -90,7 +90,7 @@ include 'searchContent.php';
 		
 			<div class="insideFrame">
 
-				<p> <?php echo $separate[1];?></p>
+				<p> <?php echo $separate[1]; ?></p>
 		
 
 			</div>

@@ -10,7 +10,7 @@
             function checkEmail() {
                 var email = $('#email').val();
                 $.ajax({
-                    url: "emailCheck.php",
+                    url: "emailCheckdivision.php",
                     async: true,
                     type: "POST",
                     data: {email: email}
@@ -30,10 +30,13 @@
       }  
       else  
       {  
-         alert("Please provide a valid Phone Number");  
+         alert("Please provide a valid Contact Number");  
          return false;  
       }  
       }  
+            
+            
+    
         </script>
         <style>
             .radio-left {
@@ -74,9 +77,15 @@
                
                 $sql = "INSERT INTO division (division_id,division_name,location,head,telephone,fax,email,website,image) VALUES ('$id','$name','$location','$head',' $telephone','$fax','$email','$website','$image')";
                 if (mysqli_query($conn, $sql)) {
-                    //echo "insert successful";
+                    echo '<script type="text/javascript">';
+					echo 'alert("New Division Inserted Successfully !");';
+                    echo 'window.location="staff_center_back.php";';
+					echo '</script>';
 				} else {
-                    //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                   echo '<script type="text/javascript">';
+					echo 'alert("Division is already existing!");';
+                    echo 'window.location="staff_center_back.php";';
+					echo '</script>';
                 }
 
             }
@@ -106,72 +115,72 @@
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Division</h2>
-        <form class="form-horizontal" name="division" method="post" action="" onsubmit='return phonenumber(telephone)' >
+        <form name="division" method="post" action=""  >
             
             <div class="form-group">
-                <label for="id" class="col-sm-4 control-label">Division ID</label>
-                <div class="col-sm-3">
+                <label for="id" class="col-sm-6 control-label">Division ID</label>
+                <div class="col-sm-5">
                     <input type="text" name="" value="" hidden="true"><input class="form-control" type="text" name="id" value="<?php echo $divid; ?>"><br>
                 </div>
             </div>
             
             <div class="form-group">
-                 <label for="name" class="col-sm-4 control-label">Division</label>
-                 <div class="col-sm-3">
+                 <label for="name" class="col-sm-6 control-label">Division</label>
+                 <div class="col-sm-5">
                      <input required class="form-control" type="text" name="name">
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="location" class="col-sm-4 control-label">Location</label>
-                 <div class="col-sm-3">
+                 <label for="location" class="col-sm-6 control-label">Location</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="location">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="head" class="col-sm-4 control-label">Head of the Division</label>
-                 <div class="col-sm-3">
+                 <label for="head" class="col-sm-6 control-label">Head of the Division</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="head">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="telephone" class="col-sm-4 control-label">Contact number</label>
-                 <div class="col-sm-3">
-                     <input required id="telephone" class="form-control" type="text" name="telephone" >
+                 <label for="telephone" class="col-sm-6 control-label">Contact number</label>
+                 <div class="col-sm-5">
+                     <input required id="telephone" class="form-control" type="text" name="telephone" onmouseleave="phonenumber(telephone)" >
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="fax" class="col-sm-4 control-label">Fax</label>
-                 <div class="col-sm-3">
+                 <label for="fax" class="col-sm-6 control-label">Fax</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="fax">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="email" class="col-sm-4 control-label">Email</label>
-                 <div class="col-sm-3">
+                 <label for="email" class="col-sm-6 control-label">Email</label>
+                 <div class="col-sm-5">
                      <input class="form-control" id="email" type="email" name="email" oninput="checkEmail()">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="website" class="col-sm-4 control-label">Web site</label>
-                 <div class="col-sm-3">
+                 <label for="website" class="col-sm-6 control-label">Web site</label>
+                 <div class="col-sm-5">
                      <input class="form-control" id="web_site" type="url" name="website">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="image" class="col-sm-4 control-label">Image</label>
-                 <div class="col-sm-3">
+                 <label for="image" class="col-sm-6 control-label">Image</label>
+                 <div class="col-sm-5">
                      <input  type="file" name="image">
                  </div>
             </div>
     
-            <button type="submit"  class="btn btn-default" style="margin-left:-133px;">Submit</button>
+            <button type="submit"  class="btn btn-default" style="margin-left:-950px;margin-top:35%;">Submit</button>
               
             </form>
         </div>
