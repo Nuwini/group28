@@ -373,7 +373,7 @@
            <div class="form-group">
                  <label for="profilepic" class="col-sm-4 control-label">Profile Image</label>
                  <div class="col-sm-3">
-                     <input  type="file" name="profilepic">
+                     <input type="file" name="profilepic">
                  </div>
             </div>
             
