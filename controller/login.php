@@ -30,10 +30,14 @@
 			if ($count['designation']=='admin'){
 			
 			header("location:../view/pages/admin_back.php");	
-				} else {
+				} else if  ($count['designation']=='center coordinator') {
 					
-					header("location:../view/pages/staff_center_back.php");
-					}}
+					header("location:../view/pages/Centers_only.php");
+					}
+					else {
+						header("location:../view/pages/staff_center_back.php");
+					}
+					}
 		}elseif ($rows1==0){
 					echo '<script type="text/javascript">';
 					echo 'alert("Please sign up to proceed");';

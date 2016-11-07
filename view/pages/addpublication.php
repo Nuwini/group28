@@ -1,3 +1,7 @@
+<?php
+        		include('../../model/config.php');
+       ?>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -23,61 +27,14 @@
         <title>Add Publication</title>
     </head>
     <body>
-        <?php
         
-            if($_SERVER["REQUEST_METHOD"] == "POST") {
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                //echo "connected successfully";
-                
-                $topic = $_POST['topic'];
-                $date = $_POST['date'];
-                $first_author= $_POST['first_author'];
-                $collaborators = $_POST['collaborators'];
-                $research_group= $_POST['research_group'];
-                /*echo "id " . $id;*/
-               
-                $sql = "INSERT INTO publications (topic,date,first_author,collaborators,research_group) VALUES ('$topic','$date','$first_author','$collaborators','$research_group')";
-                if (mysqli_query($conn, $sql)) {
-                    //echo "insert successful";
-				} else {
-                    //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                }
-
-            }
-        ?>
         
+				
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Publications</h2>
-        <form   method="post" action="">
-            
-            
-            <div class="form-group">
-                 <label for="topic" class="col-sm-6 control-label">Title</label>
-                 <div class="col-sm-5">
-                     <input required class="form-control" type="text" name="topic">
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="date" class="col-sm-6 control-label">Date </label>
-                 <div class="col-sm-5">
-                     <input class="form-control" type="date" name="date">
-                 </div>
-            </div>
-            
-            
-             <div class="form-group">
+        <form method="post" action="../../controller/publication.php">
+		
+		    <div class="form-group">
                  <label for="first_author" class="col-sm-6 control-label">First Author</label>
                  <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="first_author">
@@ -89,16 +46,87 @@
                  <div class="col-sm-5">
                      <input class="form-control" type="text" name="collaborators">
                  </div>
-            </div>
+            </div>      
             
             <div class="form-group">
-                 <label for="research_group" class="col-sm-6 control-label">Research Group</label>
+                 <label for="topic" class="col-sm-6 control-label">Title</label>
                  <div class="col-sm-5">
-                     <input required class="form-control" type="text" name="research_group">
+                     <input required class="form-control" type="text" name="topic">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Book Title</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="booktopic">
+                 </div>
+            </div>
+            
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Publisher</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="publisher">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Series</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="series">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Volume</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="volume">
+                 </div>
+            </div>
+			
+            <div class="form-group">
+                 <label for="date" class="col-sm-6 control-label">Date </label>
+                 <div class="col-sm-5">
+                     <input class="form-control" type="date" name="date">
+                 </div>
+            </div>
+            
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Location</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="location">
+                 </div>
+            </div>
+            
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Pages</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="pages">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">Language</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="language">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="topic" class="col-sm-6 control-label">ISBN</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="isbn">
+                 </div>
+            </div>
+			
+            <div class="form-group">
+                 <label for="research_group" class="col-sm-6 control-label">Publication Type</label>
+                 <div class="col-sm-5">
+                     <input required class="form-control" type="text" name="type">
                  </div>
             </div>
     
-            <button type="submit" class="btn btn-default" style="margin-left:-950px;margin-top:20%;">Submit</button>
+            <button type="submit" class="btn btn-default" style="margin-left:200px;margin-top:5%;">Submit</button>
               
             </form>
         </div>

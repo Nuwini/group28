@@ -1,6 +1,7 @@
 <?php
 include '../../model/config.php';
 include '../../controller/del.php';
+//include '../../controller/logout.php';
 ?>
 <html>
 <head>
@@ -126,7 +127,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Course</div>
+        <div class="wp-menu-name"><a href="staff_center_back.php?type=course">Course</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -269,7 +270,14 @@ include '../../controller/del.php';
 			</select>
 
 		<input type="submit" style="border-radius:6px;sh" value = "delete">
+		
+	 <form class="logout"  action="../../controller/logout.php"  method= "post">
+		<input type="submit" style="border-radius:6px;sh" value = "Logout">
+		</form>
+		
+			
 </form>
+
 
 		</div>
 </div>

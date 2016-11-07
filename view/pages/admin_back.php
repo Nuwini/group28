@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="_csrf" content="njjNLCff-MvuYzWGmkHUwwKiVtGXn0U-Maqk">
     <meta name="hostedSubdomain" content="webflow.io">
-    <title>Eranga</title>
+    <title>Administrator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../layout/styles/designer.css">
 	<link rel="stylesheet" type="text/css" href="icon.css">
@@ -72,20 +72,20 @@
 	
 		if(isset($_GET['type'])){
 			if($_GET['type'] == 'home'){
-				require "../../index.html";
+				require "../../index.php";
 			}
 			else if($_GET['type'] == 'aboutus'){
 				require "about_us.php";
 			}
 			else if($_GET['type'] == 'view3'){
-				require "project1/pages/gallery.php";
+				require "gallery.php";
 			}
 			else if($_GET['type'] == 'source'){
 				require "source.php";
 			}
 		}
 		else{
-			require "../../index.html";
+			require "../../index.php";
 		}
 	
 		?>
@@ -242,8 +242,8 @@
 										<button onclick="myFunction()" class="dropbtn">page</button>
 											<div id="myDropdown" class="dropdown-content">
 												<a href="admin_back.php?type=home">Home</a></option>
-												<a href="admin_back.php?type=aboutus">Link 2</a></option>
-												<a href="admin_back.php?type=view3">Link 3</a></option>
+												<a href="admin_back.php?type=aboutus">About Us</a></option>
+												<a href="admin_back.php?type=view3">Gallery></option>
 											</div>
 									</span>
 									</div>
@@ -258,8 +258,6 @@
                         </div>
 						<div class="bem-TopBar_Body_ContextLens_Name ">
 							
-								<span class="bem-TopBar_Body_ContextLens_Name_Label ">User Name: </span>
-								<span class="bem-TopBar_Body_ContextLens_Name_Value ">position</span>
 								<span><i>  </i></span>
 							
 								<svg><img src="teacher.png" width="40" height="40"></svg>

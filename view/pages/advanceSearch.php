@@ -1,6 +1,6 @@
 <?php 
-include '../model/config.php';
-include 'searchContent.php';
+include '../../model/config.php';
+include '../../controller/searchContent.php';
 
 ?>
 

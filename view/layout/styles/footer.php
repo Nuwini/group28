@@ -25,12 +25,12 @@
     <div class="linkbox">
       <h2>UCSC Centres</h2>
       <ul>
-        <li><a href="pages/centres.html">&raquo; Advance Digital Media Technologies Centre(ADMTC)</a></li>
-        <li><a href="pages/centres1.html">&raquo; Computing Service Centre(CSC)</a></li>
-        <li><a href="pages/centres1.html">&raquo; Digital Forensic Centre(DFC)</a></li>
-        <li><a href="pages/centres.html">&raquo; E-Learning Centre(ELC)</a></li>
-        <li><a href="pages/centres1.html">&raquo; External Degree Centre(EDC)</a></li>
-        <li><a href="pages/centres.html">&raquo; Professional Development Centre(PDC)</a></li>
+        <li><a href="../../pages/centres.php">&raquo; Advance Digital Media Technologies Centre(ADMTC)</a></li>
+        <li><a href="../../pages/centres1.php">&raquo; Computing Service Centre(CSC)</a></li>
+        <li><a href="../../pages/centres1.php">&raquo; Digital Forensic Centre(DFC)</a></li>
+        <li><a href="../../pages/centres.php">&raquo; E-Learning Centre(ELC)</a></li>
+        <li><a href="../../pages/centres1.php">&raquo; External Degree Centre(EDC)</a></li>
+        <li><a href="../../pages/centres.php">&raquo; Professional Development Centre(PDC)</a></li>
       </ul>
     </div>
     <div class="linkbox last">

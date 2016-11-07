@@ -74,8 +74,8 @@ include('../../model/config.php');
       </div>
       <div class="holder">
         <h2 class="title">CONFERENCES AND SYMPOSIUMS</h2>
-        <div class="imgholder"><a href="conferences_and_sysmposiums.html"><img src="../images/demo/icter.png" alt="" /></a></div>
-        <div class="imgholder last"><a href="conferences_and_sysmposiums.html"><img src="../images/demo/symposium.png" alt="" /></a></div>
+        <div class="imgholder"><a href="conferences_and_sysmposiums.php"><img src="../images/demo/icter.png" alt="" /></a></div>
+        <div class="imgholder last"><a href="conferences_and_sysmposiums.php"><img src="../images/demo/symposium.png" alt="" /></a></div>
       </div>
     </div>
     <!-- ############ -->
@@ -162,97 +162,7 @@ include('../../model/config.php');
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<<<<<<< 7a268ff36bbcfee1f7c05cef862e5fd726034927
-<div class="wrapper">
-  <div id="academiclinks" class="clear">
-    <div class="linkbox">
-      <h2>Degrees</h2>
-      <ul>
-        <li><a href="undergraduate_studies.html">&raquo; Undergraduate Progammes</a></li>
-        <li><a href="postgraduate_studies.html">&raquo; Postgraduate progammes</a></li>
-        <li><a href="#">&raquo; Research Degrees</a></li>
-        <li><a href="BIT.html">&raquo; External Degrees</a></li>
-        <li><a href="#">&raquo; Online Programmes</a></li>
-      </ul>
-    </div>
-    <div class="linkbox">
-      <h2>Mannagement</h2>
-      <ul>
-        <li><a href="#">&raquo; Academic & Publication</a></li>
-        <li><a href="#">&raquo; Establishments & Administratoin </a></li>
-        <li><a href="#">&raquo; Examination and Registraton</a></li>
-        <li><a href="#">&raquo; Engineering Division</a></li>
-        <li><a href="#">&raquo; Finance Division</a></li>
-        <li><a href="#">&raquo; Information Systems(NOC)</a></li>
-      </ul>
-    </div>
-    <div class="linkbox">
-      <h2>UCSC Centres</h2>
-      <ul>
-        <li><a href="centres.html">&raquo; Advace Digital Media Technologies Centre(ADMTC)</a></li>
-        <li><a href="centres1.html">&raquo; Computing Service Centre(CSC)</a></li>
-        <li><a href="centres1.html">&raquo; Digital Forencis Centre(DFC)</a></li>
-        <li><a href="centres.html">&raquo; E-Learning Centre(ELC)</a></li>
-        <li><a href="centres1.html">&raquo; External Degree Centre(EDC)</a></li>
-        <li><a href="centres.html">&raquo; Professional Development Centre(PDC)</a></li>
-      </ul>
-    </div>
-    <div class="linkbox last">
-      <h2>Departments</h2>
-      <ul>
-        <li><a href="#">&raquo; Computing and Intelligetn Systems</a></li>
-        <li><a href="#">&raquo; Infrmation systems Engineering</a></li>
-        <li><a href="#">&raquo; Comunicaton and Media Technologies</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div id="footer" class="clear"> 
-    <!-- ####################################################################################################### -->
-    <div class="fl_left clear">
-      <div class="fl_left center"><img src="../images/demo/google.png" alt="" /><br />
-        <a href="#">Find Us With Google Maps &raquo;</a></div>
-      <address>
-      University of Colombo School of Computing<br />
-      UCSC Building Complex<br />
-      35,Reid Avenue,Colombo 07<br />
-      SRI LANKA<br />
-      <br />
-      Tel: +94 -11- 2581245/ 7<br />
-      Email: <a href="#">info@ucsc.cmb.ac.lk</a>
-      </address>
-    </div>
-    <div class="fl_right">
-      <div id="social" class="clear">
-        <p>Stay Up to Date With Whats Happening</p>
-        <ul>
-          <li><a style="background-position:0 0;" href="#">Twitter</a></li>
-          <li><a style="background-position:-72px 0;" href="#">LinkedIn</a></li>
-          <li><a style="background-position:-142px 0;" href="#">Facebook</a></li>
-          <li><a style="background-position:-212px 0;" href="#">Flickr</a></li>
-          <li><a style="background-position:-282px 0;" href="#">RSS</a></li>
-        </ul>
-      </div>
-      <div id="newsletter">
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Subscribe To Our Newsletter:</legend>
-            <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-            <input type="text" id="subscribe" value="Submit" />
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <div id="copyright" class="clear">
-      <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">University of Colombo School of Computing</a></p>
-    </div>
-    <!-- ####################################################################################################### --> 
-  </div>
-</div>
-=======
 <?php include('../layout/styles/footer.php');?>
->>>>>>> views & achievements
+
 </body>
 </html>

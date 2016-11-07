@@ -7,40 +7,7 @@
 <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 </head>
 <body id="top">
-<div class="wrapper row1">
-  <div id="topnav">
-    <ul>
-      <li><a href="../../index.html"><strong>Home</strong></a></li>
-      <li><a href="style-demo.html"><strong>About Us</strong></a></li>
-      <li><a href="full-width.html"><strong>Academic Programmes</strong></a></li>
-      <li><a href="3-columns.html"><strong>People</strong></a></li>
-      <li class="active"><a href="gallery.html"><strong>Gallery</strong></a></li>
-      <li><a href="#"><strong>Services</strong></a></li>
-      <li><a href="#"><strong>News/Notices</strong></a></li>
-      <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
-    </ul>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row2">
-  <div id="header" class="clear">
-  <div class="img">
-      <h1><a href="index.html"><img src="../images/demo/logo-ucsc-1.png"/></a></h1>
-      <p></p>
-    </div>
-        <div class="fl_right">
-      <form action="#" method="post" id="sitesearch">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" />
-          <input type="image" src="../images/demo/search.gif" id="search" alt="Search" />
-        </fieldset>
-      </form>
-      <p><a href="#">Site Map</a> | <a href="#">Login</a></p>
-    </div>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
+<?php include('../layout/styles/header.php');?>
 <div class="wrapper row4">
   <div id="quicknav" class="clear">
     <ul>
@@ -86,7 +53,7 @@
     <div id="portfolio">
       <ul>
         <li class="clear">
-          <div class="fl_left"><a href="#"><img src="../images/demo/pdc.png" alt=""/></a></div>
+          <div class="fl_left"><a href="#"><img src="../images/demo/icter.jpg" alt=""/></a></div>
           <div class="fl_right">
             <h2>ICTer 2015</h2>
             <p>Emerging regions offer a wealth of opportunities in trade,technology and investment.The recent economic development in these regions has spurred them to seek a more important role in world affairs.This has been particularly evident in the field of Information and Communications Technology(ICT),where emerging regions have seen a very rapid growth.This growth is mirrored by the wealth of the increasing number of research publications produced.</p>
@@ -94,7 +61,7 @@
           </div>
         </li>
         <li class="clear">
-          <div class="fl_left"><a href="#"><img src="../images/demo/admtc.png" alt="" /></a></div>
+          <div class="fl_left"><a href="#"><img src="../images/demo/symposium.jpg" alt="" /></a></div>
           <div class="fl_right">
             <h2>UCSC Research Symposium 2015</h2>
             <p>Sri Lanka's utmost university event,"UCSC Research Symposium 2014/2015" organized by the University of Colombo School of Computing was successfully held on 29th of April,2015bfor the 7th consecutive year at the New Arts Theatre.This event creates an invaluable opportunity for the immediate 4th year pass-out students to present and promote their final year research projects and gain the well-eserved recognition in the field for their immense efforts.</p>
@@ -161,50 +128,6 @@
     </div>
   </div>
 </div>
-<!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div id="footer" class="clear"> 
-    <!-- ####################################################################################################### -->
-    <div class="fl_left clear">
-      <div class="fl_left center"><img src="../images/demo/google.png" alt="" /><br />
-        <a href="#">Find Us With Google Maps &raquo;</a></div>
-      <address>
-      University of Colombo School of Computing<br />
-      UCSC Building Complex<br />
-      35,Reid Avenue,Colombo 07<br />
-      SRI LANKA<br />
-      <br />
-      Tel: +94 -11- 2581245/ 7<br />
-      Email: <a href="#">info@ucsc.cmb.ac.lk</a>
-      </address>
-    </div>
-    <div class="fl_right">
-      <div id="social" class="clear">
-        <p>Stay Up to Date With Whats Happening</p>
-        <ul>
-          <li><a style="background-position:0 0;" href="#">Twitter</a></li>
-          <li><a style="background-position:-72px 0;" href="#">LinkedIn</a></li>
-          <li><a style="background-position:-142px 0;" href="#">Facebook</a></li>
-          <li><a style="background-position:-212px 0;" href="#">Flickr</a></li>
-          <li><a style="background-position:-282px 0;" href="#">RSS</a></li>
-        </ul>
-      </div>
-      <div id="newsletter">
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Subscribe To Our Newsletter:</legend>
-            <input type="text" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
-            <input type="text" id="subscribe" value="Submit" />
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    <div id="copyright" class="clear">
-      <p class="fl_left">Copyright &copy; 2016 - All Rights Reserved - <a href="#">University of Colombo School Of Computing</a></p>
-      
-    </div>
-    <!-- ####################################################################################################### --> 
-  </div>
-</div>
+<?php include('../layout/styles/footer.php');?>
 </body>
 </html>

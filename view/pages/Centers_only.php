@@ -213,38 +213,14 @@ include '../../controller/del.php';
 			require "updateprofile.php";
 		}
 
-		else if($_GET['type'] == 'dep'){
-				require "adddepartment.php";
-		}
-		else if($_GET['type'] == 'divi'){
-				require "adddivision.php";
-		}
+		
 		else if($_GET['type'] == 'centers'){
 				require "addcenter.php";
 		}
-		else if($_GET['type'] == 'facility'){
-				require "addfacility.php";
+		else {
+			require "Centers_only.php";
 		}
-		else if($_GET['type'] == 'publication'){
-				require "addpublication.php";
-		}
-		else if($_GET['type'] == 'course'){
-				require "courses.php";
-		}
-		else if($_GET['type'] == 'payment'){
-				require "paymentstaff.php";
-		}
-		else if($_GET['type'] == 'post'){
-				require "posts.php";
-		}
-		else if($_GET['type'] == 'reservation'){
-				require "reservationinternal.php";
-		}
-		else if($_GET['type'] == 'stats'){
-				require "statisticaldetails.php";
-		}
-
-	}
+			}
 	else{
 			require "welcomepage.php";
 		}
