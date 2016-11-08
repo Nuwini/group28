@@ -101,76 +101,13 @@
          
     </head>
     <body>
-        <?php
-        
-            if($_SERVER["REQUEST_METHOD"] == "POST") {
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                //echo "connected successfully";
-                
-                $userid= $_POST['userid'];
-                $fname = $_POST['fname'];
-                $mname = $_POST['mname'];
-                $lname = $_POST['lname'];
-                $name_initials = $_POST['name_initials'];
-                $nic=$_POST['nic'];
-                $gender = $_POST['gender'];
-                $email = $_POST['email'];
-                $contactno1 = $_POST['contactno1'];
-                $contactno2 = $_POST['contactno2'];
-                $addline1 = $_POST['addline1'];
-		        $addline2 = $_POST['addline2'];
-                $city = $_POST['city'];
-		        $country = $_POST['country'];
-                $designation = $_POST['designation'];
-                $stype= $_POST['s_type'];
-		        $scategory = $_POST['s_category'];                
-		        $department = $_POST['department'];
-                $division = $_POST['division'];
-                $center=$_POST['center'];
-                $research_interests=$_POST['research_interests'];
-		        $password = $_POST['password'];
-		        $profilepic = $_POST['profilepic'];
-                
-                   $sql = "INSERT INTO staff (user_id,f_name,m_name,l_name,name_initials,nic,research_interests,gender,email,contact_no1,contact_no2,add_line1,add_line2,add_city,add_country,designation,s_type,s_category,dep_id,center_id,division_id,password,profile_pic) VALUES ('$userid','$fname','$mname','$lname','$name_initials','$nic','$research_interests','$gender','$email','$contactno1','$contactno2','$addline1','$addline2','$city','$country','$designation','$stype','$scategory','$department','$center','$division','$password','$profilepic')"; 
-                
-
-                
-                if (mysqli_query($conn, $sql)) {
-                    //echo "insert successful";
-				} else {
-                    //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                }
-            }
-        ?>
         
         
         <?php
-        
-        $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
+		
+		include('../../model/config.php');
     
-        $result=mysqli_query($conn, "SELECT count(*) as total from staff");
+        $result=mysqli_query($connect, "SELECT count(*) as total from emp_data");
         $count = mysqli_fetch_assoc($result)['total'];
         $count++;
         $user_id = "EO" . strval($count);
@@ -185,6 +122,18 @@
             <input required class="form-control" type="text" name="userid" value="<?php echo $user_id; ?>">
                 </div>
             </div>
+			
+			<div class="form-group">
+                 <label for="title" class="col-sm-4 control-label">Title</label>
+                 <div class="col-sm-3">
+                 
+                 <select name="title" class="form-control" id="title">
+                    <option></option>
+                    <option value="T0001">Mr</option>
+                    <option value="T0002">Ms</option>
+                    <option value="T0003">Dr</option>
+                     </select>
+                </div>
             
             <div class="form-group">
                  <label for="fname" class="col-sm-4 control-label">First Name</label>
@@ -193,13 +142,7 @@
                  </div>
             </div>
             
-            <div class="form-group">
-                 <label for="lname" class="col-sm-4 control-label">Middle Name</label>
-                 <div class="col-sm-3">
-                     <input required  class="form-control" type="text" name="mname">
-                 </div>
-            </div>
-            
+                      
              <div class="form-group">
                  <label for="lname" class="col-sm-4 control-label">Last Name</label>
                  <div class="col-sm-3">
@@ -214,22 +157,8 @@
                  </div>
             </div>
             
-            <div class="form-group">
-              <label for="gender" class="col-sm-4 control-label">Gender</label>
-                <label class="radio-inline radio-left">
-              <input type="radio" name="gender" id="gender" value="male"> Male
-            </label>
-                <label class="radio-inline radio-left">
-              <input type="radio" name="gender" id="gender" value="female"> Female
-            </label>
-            </div>
-            
-        <div class="form-group"> 
-        <label for="nic" class="col-sm-4 control-label">NIC </label>
-        <div class="col-sm-3">
-            <input required id="nic" type="text" name="nic" class="form-control">
-        </div></div>
-            
+                      
+                 
             
             
             <div class="form-group">
@@ -240,48 +169,17 @@
             </div>
             
             <div class="form-group">
-                <label for="cotactno1" class="col-sm-4 control-label">Contact Number 1</label>
+                <label for="cotactno1" class="col-sm-4 control-label">Contact Number</label>
                 <div class="col-sm-3">
                     <input required class="form-control" type="text" name="contactno1" onmouseleave="phonenumber1(contactno1)">
                 </div>
             </div>
             
-            <div class="form-group">
-                <label for="cotactno2" class="col-sm-4 control-label">Contact Number 2</label>
-                <div class="col-sm-3">
-                    <input required class="form-control" type="text" name="contactno2" onmouseleave="phonenumber2(contactno2)">
-                </div>
-            </div>
-                        
-             <div class="form-group">
-                 <label for="addline1" class="col-sm-4 control-label">Address line1</label>
-                 <div class="col-sm-3">
-                     <input class="form-control" type="text" name="addline1">
-                 </div>
-            </div>
+                                   
+             
             
+                       
             <div class="form-group">
-                 <label for="addline2" class="col-sm-4 control-label">Address line2</label>
-                 <div class="col-sm-3">
-                     <input class="form-control" type="text" name="addline2">
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="city" class="col-sm-4 control-label">City</label>
-                 <div class="col-sm-3">
-                     <input class="form-control" type="text" name="city">
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="country" class="col-sm-4 control-label">Country</label>
-                 <div class="col-sm-3">
-                     <input class="form-control" type="text" name="country">
-                 </div>
-            </div>
-
-	       <div class="form-group">
                  <label for="designation" class="col-sm-4 control-label">Designation</label>
                  <div class="col-sm-3">
                      <input required  class="form-control" type="text" name="designation">
@@ -296,14 +194,6 @@
                     <option value="type2">Administrative Staff</option>
                     <option value="type3">Project Staff</option>
                     <option value="type4">Visiting Staff</option>
-                </select>
-                 </div>
-            </div>
-            
-             <div class="form-group">
-                 <label for="s_category" class="col-sm-4 control-label">Staff Category</label>
-                 <div class="col-sm-3">
-                 <select name="s_category" class="form-control" id="s_category">
                 </select>
                  </div>
             </div>
@@ -355,7 +245,73 @@
              <div class="col-sm-3">
                  <textarea required class="form-control" id="research_interests" name="research_interests"></textarea></div>
             </div>
-                                
+			
+			<div class="form-group">
+            <label for="qualifications" class="col-sm-4 control-label" >Qualifications</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="qualifications" name="qualifications"></textarea></div>
+            </div>
+               
+			<div class="form-group">
+            <label for="facebook_link" class="col-sm-4 control-label" >Facebook Link</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="facebook_link" name="facebook_link"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="linkedin_link" class="col-sm-4 control-label" >LinkedIn Link</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="linkedin_link" name="linkedin_link"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="biography" class="col-sm-4 control-label" >Biography</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="biography" name="biography"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="academic_record" class="col-sm-4 control-label" >Academic Record</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="academic_record" name="academic_record"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="awards" class="col-sm-4 control-label" >Awards</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="awards" name="awards"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="activity" class="col-sm-4 control-label" >Activity</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="activity" name="activity"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="employeement_record" class="col-sm-4 control-label" >Employeement Record</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="employeement_record" name="employeement_record"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="teaching" class="col-sm-4 control-label" >Teaching</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="teaching" name="teaching"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="projects_supervised" class="col-sm-4 control-label" >Projects Supervised</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="projects_supervised" name="projects_supervised"></textarea></div>
+            </div>
+			
+			<div class="form-group">
+            <label for="publications" class="col-sm-4 control-label" >Publications</label>
+             <div class="col-sm-3">
+                 <textarea required class="form-control" id="publications" name="publications"></textarea></div>
+            </div>
+			
              <div class="form-group">
             <label for="password" class="col-sm-4 control-label">Password</label>
                 <div class="col-sm-3">
