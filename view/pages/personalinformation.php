@@ -115,7 +115,7 @@
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:25px;">Welcome to UCSC</h2>
-        <form class="form-horizontal" method="post" action="" onsubmit='return check()'>
+        <form class="form-horizontal" method="post" action="../../controller/personal_information.php" onsubmit='return check()'>
             <div class="form-group">
             <label for="userid" class="col-sm-4 control-label">UserID</label>
                 <div class="col-sm-3">

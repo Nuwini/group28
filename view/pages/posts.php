@@ -16,21 +16,10 @@
     </head>
     <body>
         <?php
+		
+		include('../../model/config.php');
         
             if($_SERVER["REQUEST_METHOD"] == "POST") {
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                /*echo "connected successfully";*/
                 
                 $uid = $_POST['uid'];
                 $dposted = $_POST['dposted'];

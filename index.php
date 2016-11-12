@@ -1,3 +1,17 @@
+<?php
+include 'model/config.php';
+
+$sql = "SELECT * FROM info";
+
+$result = mysqli_query($connect, $sql);
+                if (!$result) {
+                    echo "Error";
+                    die();
+				}
+                $record = mysqli_fetch_assoc($result);
+				
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
  
@@ -59,13 +73,13 @@ $(document).ready(function() {
       <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/selected photos/UCSC Building 3.jpg" alt="" /></a>
         <div class="introtext">
           <h2>Vision</h2>
-          <p>Be a Global Leader in Computing , Advancing the Frontiers of new Knowledge through Learning and Research.</p>
+          <p><?php echo $record['vision']?></p>
         </div>
       </li>
       <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/12.png" alt="" /></a>
         <div class="introtext">
           <h2>Mission</h2>
-          <p>To advance and enhance computing knowledge ,fostering global strategic alliances ,promoting cross disciplinary research ,producing socially responsible professionals with entrepreneur skills ,leadership qualities and integrity contributing to position the country as a knowledge hub in the region.</p>
+          <p><?php echo $record['mission']?></p>
         </div>
       </li>
       <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/13.jpeg" alt="" /></a>

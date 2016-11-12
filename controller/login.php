@@ -29,7 +29,7 @@
 			
 			if ($count['designation']=='admin'){
 			
-			header("location:../view/pages/admin_back.php");	
+			header("location:../view/pages/admin_only.php");	
 				} else if  ($count['designation']=='center coordinator') {
 					
 					header("location:../view/pages/Centers_only.php");
@@ -41,7 +41,7 @@
 		}elseif ($rows1==0){
 					echo '<script type="text/javascript">';
 					echo 'alert("Please sign up to proceed");';
-                    echo 'window.location="../view/pages/personal_information.html";';
+                    echo 'window.location="../view/pages/personalinformation.php";';
 					echo '</script>';
 					}else{
 						echo '<script type="text/javascript">';
