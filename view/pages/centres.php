@@ -73,8 +73,35 @@
         <li class="clear">
           <div class="fl_left"><a href="#"><img src="../images/demo/elc.png" alt="" /></a></div>
           <div class="fl_right">
-            <h2>eLearning Centre</h2>
+            <h2>eLearning Centre(eLC)</h2>
             <p>The eLearning Centre was established in 2002 at the University of Colombo School of Computing to provide e-learning services to both internal and external students of the UCSC. The Bachelor of Information Technology (BIT) was supported by e-learning centre from 2003 using learning management facilities. The e-Learning Centre will serve as a central hub that encourages e-Learning and supports other universities, academic institutes, research organizations and e-Learning users of the country.</p>
+            
+            <p class="readmore"><a href="#">View This Centre &raquo;</a></p>
+          </div>
+        </li>
+		<li class="clear">
+          <div class="fl_left"><a href="#"><img src="../images/demo/edc.png" alt=""/></a></div>
+          <div class="fl_right">
+            <h2>External Degrees Centre (EDC)</h2>
+            <p>The main purpose of establishing the External Degrees Centre and the three year external degree programme, Bachelor of Information Technology(BIT) is to widen the higher educational opportunities of the students who have been unsuccessful in meeting the competitive eligibility criteria for admission to the state university system. Another reason has been the massive demand from the ICT industry for high quality human resources far exceeding the number provided by the state universities. The BIT degree programme commenced in the year 2000 and has so far produced 1242 graduates and almost all have been absorbed by the ICT industry. Internal students of University of Colombo have the right to follow BIT degree programme since it is a part time programme. For more details visit the website: <a href="http://www.bit.lk" title="pdc">EDC</a></p>
+            
+            <p class="readmore"><a href="#">View This Centre &raquo;</a></p>
+          </div>
+        </li>
+        <li class="clear">
+          <div class="fl_left"><a href="#"><img src="../images/demo/dfc.png" alt="" /></a></div>
+          <div class="fl_right">
+            <h2>Digital Forensic Centre(DFC)</h2>
+            <p>Digital Forensic Center of the UCSC was established in 2011.One UCSC and two international academics are advisors of the centre. Centre facilities have been strengthened using a generous donation of US $25,000 by UOC alumni. Centre has taken over the role of assisting the Sri Lanka Police and the Criminal Investigation Department which the UCSC undertook since 2003.The centre was requested to support in finding evidence for digital crime cases have been consistently increased during last few years with over 50 court cases in the form of forgery frauds, illegal, pornography and terrorist handled annually at cost. For more details visit the website : <a href="http://www.ucsc.cmb.ac.lk/dfc" title="dfc">DFC</a></p>
+            
+            <p class="readmore"><a href="#">View This Centre &raquo;</a></p>
+          </div>
+        </li>
+        <li class="clear">
+          <div class="fl_left"><a href="#"><img src="../images/demo/csc.png" alt="" /></a></div>
+          <div class="fl_right">
+            <h2>Computer Services Centre (CSC)</h2>
+            <p>The Computing Services Centre (CSC) of UCSC is the main consultancy arm of the UCSC. It conducts system design and development, system recommendation, software project consulting, recruitment testing, tender evaluation, feasibility study and acceptance tests for computer hardware and software. It also conducts tailor-made training programmes for the organizations in the private and public sector. The Software Development Unit (SDU) (SDU) is a part of CSC and SDU carries out the software development activities of UCSC. Third year students of undergraduate programme will be given a chance of placement at SDU during their internship. In order to further expand, consultancy and special projects, UCSC has established a company called Theekshana at Theekshana For more details visit the website : <a href="http://www.ucsc.cmb.ac.lk/csc" title="csc">CSC</a></p>
             
             <p class="readmore"><a href="#">View This Centre &raquo;</a></p>
           </div>

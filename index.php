@@ -2,13 +2,28 @@
 include 'model/config.php';
 
 $sql = "SELECT * FROM info";
+$sql1="select center_name from centers";
+$sql2="select dep_name from department";
 
 $result = mysqli_query($connect, $sql);
+$result1 = mysqli_query($connect,$sql1);
+$result2 = mysqli_query($connect,$sql2);
+
                 if (!$result) {
                     echo "Error";
                     die();
 				}
+				if (!$result1) {
+                    echo "Error";
+                    die();
+				}
+				if (!$result2) {
+                    echo "Error";
+                    die();
+				}
+				
                 $record = mysqli_fetch_assoc($result);
+				
 				
 ?>
 
@@ -214,22 +229,32 @@ $(document).ready(function() {
     </div>
     <div class="linkbox">
       <h2>UCSC Centres</h2>
-      <ul>
-        <li><a href="view/pages/centres.php">&raquo; Advance Digital Media Technologies Centre(ADMTC)</a></li>
-        <li><a href="view/pages/centres1.php">&raquo; Computing Service Centre(CSC)</a></li>
-        <li><a href="view/pages/centres1.php">&raquo; Digital Forensic Centre(DFC)</a></li>
-        <li><a href="view/pages/centres.php">&raquo; E-Learning Centre(ELC)</a></li>
-        <li><a href="view/pages/centres1.php">&raquo; External Degree Centre(EDC)</a></li>
-        <li><a href="view/pages/centres.php">&raquo; Professional Development Centre(PDC)</a></li>
-      </ul>
-    </div>
+	  
+	  <?php
+	  if (mysqli_num_rows($result1) > 0) {
+    
+    while($row = mysqli_fetch_assoc($result1)) {
+		
+		echo "<ul>";
+        echo "<li><a href='view/pages/centres.php'>".$row["center_name"]."</a></li><br>";
+		echo "</ul>";
+	}
+}
+	  ?>
+      </div>
     <div class="linkbox last">
       <h2>Departments</h2>
-      <ul>
-        <li><a href="#">&raquo; Computing and Intelligent Systems</a></li>
-        <li><a href="#">&raquo; Information Systems Engineering</a></li>
-        <li><a href="#">&raquo; Communicaton and Media Technologies</a></li>
-      </ul>
+      <?php
+	  if (mysqli_num_rows($result2) > 0) {
+    
+    while($row = mysqli_fetch_assoc($result2)) {
+		
+		echo "<ul>";
+        echo "<li><a href='view/pages/departments.php'>".$row["dep_name"]."</a></li><br>";
+		echo "</ul>";
+	}
+}
+	  ?>
     </div>
   </div>
 </div>
