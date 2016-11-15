@@ -46,6 +46,10 @@
                                 <td><br /><br/><div class="form-group">
                                     <label for="mission" class="col-lg-5 control-label">Mission</label><br /> 
                                         <textarea required class="form-control" id="mission" name="mission"><?php echo $record['mission']?></textarea></div></td>
+										
+										<td><br /><br/><div class="form-group">
+                                    <label for="description" class="col-lg-5 control-label"></label>General Description<br /> 
+                                        <textarea required class="form-control" id="description" name="description"><?php echo $record['ucsc_description']?></textarea></div></td>
                                 
                                  </tr>
                             

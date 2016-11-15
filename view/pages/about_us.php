@@ -1,5 +1,12 @@
 <?php
 include('../../model/config.php');
+$sql = "SELECT ucsc_description FROM info";
+$result = mysqli_query($connect, $sql);
+if (!$result) {
+                    echo "Error";
+                    die();
+				}
+				$record = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -82,13 +89,7 @@ include('../../model/config.php');
     <div id="content">
       <h1 class="title">University of Colombo School of Computing</h1>
       <div class="imgholder"><img src="../images/demo/ucsc.png" alt="" /></div>
-      <p>The University of Colombo School of Computing (UCSC) is an integral part of the University of Colombo ,and has a history over 50 years as the leading computing educational in Sri Lanka.</p>
-
-<p>Computer education at University of Colombo was established way back in 1967 by the historic affiliation of the Statistical Consultancy and Data Processing Service Centre by the salient guidance and efforts of late Professor.V.K.Samaranayake ,who pioneered computing and IT development and usage in Sri Lanka and thus considered as the “Father if Information Technology” in Sri Lanka. He was a Professor of computer science and a former dean of the Faculty of Science ,University of Colombo. Professor Samaranayake was at the time of his death ,the chairman of the Information and Communication Technology Agency(ICTA) of Sri Lanka.</p>
-
-<p>The lead role of the Department of Statistics and Computer Science (DSCS) was to offer special degree programme in Computer Science. DSCS launched the first post-graduate programme in computing offered by a Sri Lankan university in 1986 and later in 1990 instantiated a special programme in computer science which subsequently produced a scant forty graduates per batch which was desperately insufficient to meet the increasing demand for professionals to various disciplines in the field of computer science. Considering the domain ICT was reigning and the golden opportunities which the institute already posed ,it became the right counterpart for the Department of Computer Science to achieve the goals ,the latter envisioned for. Thus ,happened the historic merge between the industry focused Institute of Computer Technology and the more theoretically oriented Department of Computer Science and gave birth to University of Colombo School of Computing(UCSC) on the 01st of Sseptember,2002.The UCSC can be now identified as an integral part of University of Colombo.</p>
-
-<p>At present ,UCSC recruits more than 1000 in housing students and 400 post graduate students. The students who are admitted to the UCSC may read for a degree programme in Computer Science(CS) OR Information Systems(IS).The UCSC offers three year and four year degree programmes in each of these disciplines.B.sc(Hons) in Computer Science or the degree in Bachelor of Science Honours in Software Engineering. Under the Postgraduate Masters programme of the UCSC ,students can read for the Master of Computer Science(MCS),Master of Information Technology(MIT) and Master of Science in Information Security(MIS).UCSC also offers Mphil and PhD research programmes.</p>
+      <p><?php echo $record['ucsc_description']?></p>
 
 	  <h2> <class="title">Academic Departments</h2>
       <table summary="Summary Here" cellpadding="0" cellspacing="0">

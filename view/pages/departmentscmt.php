@@ -1,13 +1,3 @@
-<?php
-include '../../model/config.php';
-$sql = "SELECT dep_description FROM department where dep_id='D0001'";
-$result = mysqli_query($connect, $sql);
-if (!$result) {
-                    echo "Error";
-                    die();
-				}
-				$record = mysqli_fetch_assoc($result);
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,10 +10,6 @@ if (!$result) {
 
 </head>
 <body id="top">
-
-<h1>About</h1>
-<p><?php echo $record['dep_description']?></p>
-
 <?php include('../layout/styles/header.php');?>
 
 <?php include('../../model/config.php'); 
