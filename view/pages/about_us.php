@@ -1,12 +1,19 @@
 <?php
 include('../../model/config.php');
-$sql = "SELECT ucsc_description FROM info";
+$sql = "SELECT ucsc_description,goals FROM info";
+$sql1 = "SELECT dep_name,dep_head,telephone,email FROM department";
 $result = mysqli_query($connect, $sql);
+$result1 = mysqli_query($connect, $sql1);
 if (!$result) {
                     echo "Error";
                     die();
 				}
+				if (!$result1) {
+                    echo "Error";
+                    die();
+				}
 				$record = mysqli_fetch_assoc($result);
+				
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,38 +98,7 @@ if (!$result) {
       <div class="imgholder"><img src="../images/demo/ucsc.png" alt="" /></div>
       <p><?php echo $record['ucsc_description']?></p>
 
-	  <h2> <class="title">Academic Departments</h2>
-      <table summary="Summary Here" cellpadding="0" cellspacing="0">
-        <thead>
-          <tr>
-            <th>Department</th>
-            <th>Dpt. Head Name</th>
-            <th>Contact No.</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="light">
-            <td>Department of communication and media technologies(CMT)</td>
-            <td>Mr.G.K.A.Dias</td>
-            <td>(+94)112158955</td>
-            <td>gkad@ucsc.cmb.ac.lk</td>
-          </tr>
-          <tr class="dark">
-            <td>Department of Information Systems Engineering(ISE)</td>
-            <td>Prof.K.P.Hewagamage</td>
-            <td>(+94)112158945</td>
-            <td>kph@ucsc.cmb.ac.lk</td>
-          </tr>
-          <tr class="light">
-            <td>Department of communication and intelligent systems (CIS)</td>
-            <td>Dr.Ajantha Athukorale</td>
-            <td>(+94)112158985</td>
-            <td>aja@ucsc.cmb.ac.lk</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2 class="title">Abbreviations</h2>
+	  <h2 class="title">Abbreviations</h2>
       <ul>
         <li>ADMTC – Advanced Digital Multimedia Technology Centre</li></br>
         <li>CMT – Communication and Media Technologies</li></br>
@@ -141,15 +117,7 @@ if (!$result) {
     <div id="right_column">
       <div class="holder">
         <h2 class="title">Goals</h2>
-        <ol>
-          <li>A centre of excellence in teaching and learning</li></br>
-          <li>Cross disciplinary research in computing</li></br>
-          <li>To create socially responsible professionals</li></br>
-          <li>Environment for productive work and career enhancement</li></br>
-          <li>Enhance the institutional image</li></br>
-          <li>To empower society through ICT</li></br>
-          <li>To make the country a knowledge hub</li>
-        </ol>
+        <p><?php echo $record['goals']?></p>
         
       </div>
       <div class="holder">

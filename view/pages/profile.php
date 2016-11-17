@@ -28,7 +28,7 @@ $i = 0;
 
 echo "Professors";
 
-$all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,email FROM emp_data where designation='Professor' or designation='Director'";
+$all_profiles_q="SELECT profile_pic,name_initials,designation,qualifications,email FROM staff where designation='Professor' or designation='Director'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
@@ -44,7 +44,7 @@ $all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,emai
 	echo "<tr>";
 	
         echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
-		echo "<td>".$profile_info['display_name']."</td>";
+		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['designation']."</td>";
@@ -72,7 +72,7 @@ echo "</table>";
 
 echo "Senior Lecturers";
 
-$all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,email FROM emp_data where designation='Senior Lecturer'";
+$all_profiles_q="SELECT profile_pic,name_initials,designation,qualifications,email FROM staff where designation='Senior Lecturer'";
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
         if(!$all_profiles){
@@ -86,7 +86,7 @@ $all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,emai
 			
 	echo "<tr>";
         echo "<td rowspan=5><img src=data:image/png;base64,".base64_encode($profile_info['profile_pic']) ."/></td>";
-		echo "<td>".$profile_info['display_name']."</td>";
+		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['designation']."</td>";
@@ -114,7 +114,7 @@ echo "</table>";
 
 echo "Lecturers";
 
-$all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,email FROM emp_data where designation='Lecturer'";
+$all_profiles_q="SELECT profile_pic,name_initials,designation,qualifications,email FROM staff where designation='Lecturer'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
@@ -129,7 +129,7 @@ $all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,emai
 			
 	echo "<tr>";
         echo "<td rowspan=5><img src=data:image/png;base64,".base64_encode($profile_info['profile_pic']) ."/></td>";
-		echo "<td>".$profile_info['display_name']."</td>";
+		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['designation']."</td>";
@@ -153,7 +153,7 @@ echo "</table>";
 
 echo "Academic Support Staff";
 
-$all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,email FROM emp_data where designation='Academic Support Staff'";
+$all_profiles_q="SELECT profile_pic,name_initials,designation,qualifications,email FROM staff where designation='Academic Support Staff'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
@@ -168,7 +168,7 @@ $all_profiles_q="SELECT profile_pic,display_name,designation,qualifications,emai
 			
 	echo "<tr>";
         echo "<td rowspan=5><img src=data:image/png;base64,".base64_encode($profile_info['profile_pic']) ."/></td>";
-		echo "<td>".$profile_info['display_name']."</td>";
+		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['designation']."</td>";
@@ -195,7 +195,7 @@ echo "</table>";
 
 echo "Temporary Academic Staff";
 
-$all_profiles_q="SELECT profile_pic,display_name,employee,qualifications,email FROM emp_data where designation='Temporary Academic Staff'";
+$all_profiles_q="SELECT profile_pic,name_initials,employee,qualifications,email FROM staff where designation='Temporary Academic Staff'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		

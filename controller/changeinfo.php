@@ -6,9 +6,10 @@ include('../model/config.php');
 $vision = $_POST['vision'];
 $mission = $_POST['mission'];
 $ucsc_description = $_POST['description'];
+$goals = $_POST['goals'];
 
 
-$sql = "UPDATE info SET vision='$vision',mission='$mission',ucsc_description='$ucsc_description'";
+$sql = "UPDATE info SET vision='$vision',mission='$mission',ucsc_description='$ucsc_description',goals='$goals'";
 
 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';

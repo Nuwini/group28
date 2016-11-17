@@ -20,44 +20,7 @@ $(document).ready(function() {
 
 </head>
 <body id="top">
-<div class="wrapper row1">
-  <div id="topnav">
-    <ul>
-      <li><a href="../../index.html"><strong>Home</strong></a></li>
-      <li><a href="style-demo.html"><strong>About Us</strong></a></li>
-      <li><a href="full-width.html"><strong>Academic Programmes</strong></a></li>
-      <li><a href="3-columns.html"><strong>People</strong></a></li>
-      <li class="active"><a href="gallery.html"><strong>Gallery</strong></a></li>
-      <li><a href="infrastructure_and_services.html"><strong>Services</strong></a></li>
-      <li><a href="#"><strong>News/Notices</strong></a></li>
-      <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
-    </ul>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row2">
-  <div id="header" class="clear">
-  <div class="img">
-      <h1><a href="index.html"><img src="../images/demo/logo-ucsc-1.png"/></a></h1>
-      <p></p>
-    </div>
-    <div class="fl_left">
-      <h1><a href="../index.html"></a></h1>
-      <p></p>
-    </div>
-    <div class="fl_right">
-      <form action="#" method="post" id="sitesearch">
-        <fieldset>
-          <legend>Site Search</legend>
-          <input type="text" />
-          <input type="image" src="../images/demo/search.gif" id="search" alt="Search" />
-        </fieldset>
-      </form>
-      <p><a href="#">Site Map</a> | <a href="#">Login</a></p>
-    </div>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
+<?php include('../layout/styles/header.php');?>
 <div class="wrapper row4">
   <div id="quicknav" class="clear">
   

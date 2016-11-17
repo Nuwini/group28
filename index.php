@@ -52,12 +52,12 @@ $(document).ready(function() {
 <div class="wrapper row1">
   <div id="topnav">
     <ul>
-      <li class="active"><a href="index.html"><strong>Home</strong></a></li>
+      <li class="active"><a href="index.php"><strong>Home</strong></a></li>
       <li><a href="view/pages/about_us.php"><strong>About Us</strong></a></li>
-      <li><a href="view/pages/full-width1.html"><strong>Education</strong></a></li>
-      <li><a href="view/pages/profile.php"><strong>People</strong></a></li>
-      <li><a href="view/pages/gallery.html"><strong>Gallery</strong></a></li>
-      <li><a href="view/pages/gallery1.html"><strong>Services</strong></a></li>
+      <li><a href="view/pages/research_degrees.php"><strong>Education</strong></a></li>
+      <li><a href="view/pages/academic_staff.php"><strong>People</strong></a></li>
+      <li><a href="view/pages/gallery.php"><strong>Gallery</strong></a></li>
+      <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
       <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
     </ul>

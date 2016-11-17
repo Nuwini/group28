@@ -11,7 +11,7 @@
                 float: left;
             }
         </style>
-        <title>Update General nformation</title>
+        <title>Update General Unformation</title>
     </head>
     <body>
         
@@ -50,6 +50,10 @@
 										<td><br /><br/><div class="form-group">
                                     <label for="description" class="col-lg-5 control-label"></label>General Description<br /> 
                                         <textarea required class="form-control" id="description" name="description"><?php echo $record['ucsc_description']?></textarea></div></td>
+										
+										<td><br /><br/><div class="form-group">
+                                    <label for="goals" class="col-lg-5 control-label"></label>Goals<br /> 
+                                        <textarea required class="form-control" id="goals" name="goals"><?php echo $record['goals']?></textarea></div></td>
                                 
                                  </tr>
                             
