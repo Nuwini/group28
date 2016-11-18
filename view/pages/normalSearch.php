@@ -1,11 +1,11 @@
 <?php 
-include '../model/config.php';
+include '../../model/config.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="../view/layout/styles/layout.css" type="text/css" />
+	<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 	<style type="text/css">
 
 	.insideFrame{
@@ -29,7 +29,7 @@ include '../model/config.php';
 </style>
 </head>
 <body>
-
+<?php include('../layout/styles/header.php');?>
 <?php
 $output1 = "";
 $output2 = "";
@@ -52,15 +52,6 @@ $output2 = "";
 					}
 ?>
 
-<div class="wrapper row2">
-  <div id="header" class="clear" style="padding-bottom:100px">
-    <div class="img">
-      <h1><a href="index.html"><img src="../view/images/demo/logo-ucsc-1.png"/></a></h1>
- 
-	</div>
-
-  </div>
-</div>
 <?php
 
 	$output1 = explode(",",$output1);

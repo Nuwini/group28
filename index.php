@@ -59,7 +59,7 @@ $(document).ready(function() {
       <li><a href="view/pages/gallery.php"><strong>Gallery</strong></a></li>
       <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
-      <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
+      <li class="last"><a href="view/pages/contact_us.php"><strong>Contact Us</strong></a></li>
     </ul>
   </div>
 </div>
@@ -69,7 +69,7 @@ $(document).ready(function() {
       <h1><a href="index.html"><img src="view/images/demo/logo-ucsc-1.png"/></a></h1>
           </div>
     <div class="fl_right">
-      <form action="controller/normalSearch.php" method="post" id="sitesearch">
+      <form action="view/pages/normalSearch.php" method="post" id="sitesearch">
         <fieldset>
           <legend>Site Search</legend>
           <input type="text" name="searchText" />

@@ -18,7 +18,6 @@ $(document).ready(function() {
 </head>
 <body id="top">
 <?php include('../layout/styles/header.php');?>
-
 <?php include('../../model/config.php'); 
 
 

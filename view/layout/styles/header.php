@@ -8,7 +8,7 @@
       <li><a href="view/pages/gallery.html"><strong>Gallery</strong></a></li>
       <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
-      <li class="last"><a href="#"><strong>Contact Us</strong></a></li>
+      <li class="last"><a href="contact_us.php"><strong>Contact Us</strong></a></li>
     </ul>
   </div>
 </div>

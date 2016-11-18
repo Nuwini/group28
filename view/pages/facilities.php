@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 </head>
 <body>
-<?php include('../layout/styles/header.php');?>
-<?php include('../../model/config.php');?>
+<?php include('../layout/styles/header.php');
+ include('../../model/config.php');?>
 <div class="container">
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Library</a></li>
