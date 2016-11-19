@@ -7,7 +7,7 @@ include '../../controller/searchContent.php';
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../view/layout/styles/layout.css" type="text/css" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 <style type="text/css">
 
 	.insideFrame{
@@ -33,15 +33,8 @@ include '../../controller/searchContent.php';
 
 </head>
 <body>
-
+<?php include('../layout/styles/header.php');?>
 <div class="wrapper row2">
-  <div id="header" class="clear" style="padding-bottom:100px">
-    <div class="img">
-      <h1><a href="../../index.php"><img src="../images/demo/logo-ucsc-1.png"/></a></h1>
- 
-	</div>
-
-  </div>
  	<div  style="background-color:white;height:100px">
   		<div style="float:right">
 		<form action="advanceSearch.php"  method= "post">

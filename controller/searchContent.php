@@ -1,5 +1,5 @@
 <?php 
-	include '../model/config.php';
+	include '../../model/config.php';
 ?>
 
 <?php
@@ -94,7 +94,7 @@ if(isset($_POST['searchText'])){
 
 					$searchq = $_POST['searchText'];
 					$searchq = preg_replace("#[^0-9a-z]#i","",$searchq);
-					$query = mysql_query("SELECT * FROM publications WHERE topic LIKE '%$searchq%' ") or die("could not search");	
+					$query = mysql_query("SELECT * FROM publication WHERE title LIKE '%$searchq%' ") or die("could not search");	
 					$count = mysql_num_rows($query);	
 		
 					if($count == 0 ){
@@ -102,7 +102,7 @@ if(isset($_POST['searchText'])){
 					}
 					else{
 						while($row = mysql_fetch_array($query)){
-							$fname = $row['topic'];
+							$fname = $row['title'];
 							$lname = $row['first_author'];
 							$output1 .='<div>'.$fname.' '.$lname.'</div>';
 
@@ -116,7 +116,7 @@ if(isset($_POST['searchText'])){
 					$searchq = $_POST['searchText'];		
 					$date = DateTime::createFromFormat('d/m/Y', $searchq)->format('Y-m-d');
 
-					$query = mysql_query("SELECT * FROM publications WHERE date='$date'") or die("could not search");
+					$query = mysql_query("SELECT * FROM publication WHERE date='$date'") or die("could not search");
 					$count = mysql_num_rows($query);
 
 					if($count == 0 ){
@@ -125,7 +125,7 @@ if(isset($_POST['searchText'])){
 					else{
 	
 						while($row = mysql_fetch_array($query)){
-							$fname = $row['topic'];
+							$fname = $row['title'];
 							$lname = $row['first_author'];
 
 							$output1 .='<div>'.$fname.' '.$lname.'</div>';

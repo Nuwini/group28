@@ -77,7 +77,7 @@ $(document).ready(function() {
         </fieldset>
       </form>
       <p><a href="view/pages/advanceSearch.php">advance-search</a></p>
-      <p><a href="#">Site Map</a> | <a href="view/pages/login_index.php">Login</a></p>
+      <p><a href="view/pages/sitemap.php">Site Map</a> | <a href="view/pages/login_index.php">Login</a></p>
     </div>
   </div>
 </div>
