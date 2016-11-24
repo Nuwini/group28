@@ -8,14 +8,15 @@
 </head>
 <body id="top">
 <?php include('../layout/styles/header.php');
-include 'model/config.php';
-$sql = "SELECT degreeProgramme FROM couses where course_name='FIT'";
+include '../../model/config.php';
+$sql = "SELECT degreeProgramme FROM courses where course_name='FIT'";
 $result = mysqli_query($connect, $sql);
 if (!$result) {
                     echo "Error";
                     die();
 				}
 				$record = mysqli_fetch_assoc($result);?>
+				<hr>
 <div class="wrapper row5">
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
@@ -27,13 +28,13 @@ if (!$result) {
             <h2>Foundation in Information Technology (FIT)</h2>
             <p><?php echo $record['degreeProgramme']?></p>
             
-            <p class="readmore"><a href="#">View This Centre &raquo;</a></p>
-          </div>
+            </div>
         </li>
         </ul>
     </div>
     <!-- ####################################################################################################### -->
-       <!-- ####################################################################################################### --> 
+    
+    <!-- ####################################################################################################### --> 
   </div>
 </div>
 <!-- ####################################################################################################### -->

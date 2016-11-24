@@ -214,7 +214,7 @@ include '../../controller/del.php';
 			require "updateprofile.php";
 		}
 		else if($_GET['type'] == 'updateinfo'){
-			require "generalinfo.php";
+			require "generalInfo.php";
 		}
 
 		else if($_GET['type'] == 'dep'){

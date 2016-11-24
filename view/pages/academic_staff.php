@@ -31,7 +31,7 @@
 
 $i = 0;
 
-	  $all_profiles_q="SELECT profile_pic,name_initials,designation,qualifications,email FROM staff where designation='Professor' or designation='Director'";
+	  $all_profiles_q="SELECT staff.profile_pic,staff.name_initials,academicemp_data.designation,academicemp_data.qualifications,staff.email FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where academicemp_data.designation='Professor' OR academicemp_data.designation='Director'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
@@ -72,16 +72,148 @@ echo "</table>";
 	  ?>
       </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h3>Senior Lecturers</h3>
+	  <?php
+	  
+	  $maxcols = 1;
+
+$i = 0;
+
+	  $all_profiles_q="SELECT staff.profile_pic,staff.name_initials,academicemp_data.designation,academicemp_data.qualifications,staff.email FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where academicemp_data.designation='Senior Lecturer'";
+
+        $all_profiles=mysqli_query($connect,$all_profiles_q);
+		
+        if(!$all_profiles){
+			//echo "hi";
+            die("Database query failed: ".mysqli_error($connect));
+        }
+		
+		echo "<table cellspacing=3 cellpadding=3 align=center border=0>";
+    
+        while($profile_info=mysqli_fetch_assoc($all_profiles)){
+			
+	echo "<tr>";
+	
+        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+		echo "<td>".$profile_info['name_initials']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['designation']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['qualifications']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['email']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td><button>View Profile</button><button>View Location</button></td>";
+		
+		echo "</tr>";
+		
+		$i++;
+            } 
+			
+			echo "</tr>";
+echo "</table>";
+
+	  ?>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <h3>Lecturers</h3>
+	  <?php
+	  
+	  $maxcols = 1;
+
+$i = 0;
+
+	  $all_profiles_q="SELECT staff.profile_pic,staff.name_initials,academicemp_data.designation,academicemp_data.qualifications,staff.email FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where academicemp_data.designation='Lecturer'";
+
+        $all_profiles=mysqli_query($connect,$all_profiles_q);
+		
+        if(!$all_profiles){
+			//echo "hi";
+            die("Database query failed: ".mysqli_error($connect));
+        }
+		
+		echo "<table cellspacing=3 cellpadding=3 align=center border=0>";
+    
+        while($profile_info=mysqli_fetch_assoc($all_profiles)){
+			
+	echo "<tr>";
+	
+        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+		echo "<td>".$profile_info['name_initials']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['designation']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['qualifications']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['email']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td><button>View Profile</button><button>View Location</button></td>";
+		
+		echo "</tr>";
+		
+		$i++;
+            } 
+			
+			echo "</tr>";
+echo "</table>";
+
+	  ?>
     </div>
     <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <h3>Academic Support Staff</h3>
+	  <?php
+	  
+	  $maxcols = 1;
+
+$i = 0;
+
+	  $all_profiles_q="SELECT staff.profile_pic,staff.name_initials,academicemp_data.designation,academicemp_data.qualifications,staff.email FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where academicemp_data.designation='Instructor'";
+
+        $all_profiles=mysqli_query($connect,$all_profiles_q);
+		
+        if(!$all_profiles){
+			//echo "hi";
+            die("Database query failed: ".mysqli_error($connect));
+        }
+		
+		echo "<table cellspacing=3 cellpadding=3 align=center border=0>";
+    
+        while($profile_info=mysqli_fetch_assoc($all_profiles)){
+			
+	echo "<tr>";
+	
+        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+		echo "<td>".$profile_info['name_initials']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['designation']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['qualifications']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td>".$profile_info['email']."</td>";
+		echo "</tr>";
+		echo "<tr>";
+		echo "<td><button>View Profile</button><button>View Location</button></td>";
+		
+		echo "</tr>";
+		
+		$i++;
+            } 
+			
+			echo "</tr>";
+echo "</table>";
+
+	  ?>
     </div>
   </div>
 </div>

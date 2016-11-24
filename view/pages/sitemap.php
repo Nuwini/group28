@@ -32,6 +32,7 @@ echo "<ol>";
 			echo "<li><a href='centres.php'>Centers</a></li><br>";
 			echo "<li><a href='../../index.php'>Management Divisions</a></li><br>";
 			echo "<li><a href='about_us.php'>At A Glance</a></li><br>";
+			echo "<li><a href='union.php'>Student Union</a></li><br>";
 		echo "</ul>";
 	echo "</li>";
 	echo "<li>";

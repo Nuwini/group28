@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#topnav{display:block; position:relative; width:960px; margin:0 auto; padding:0 0 30px 0; text-align:center;}
+#topnav{display:block; position:relative; width:960px; padding:0 0 0px 0; text-align:center;}
 #topnav ul, #topnav li{margin:0; padding:0; list-style:none;}
 #topnav li{display:inline; margin-right:3px;}
 #topnav li a{display:inline-block; height:40px; padding-left:14px; text-transform:uppercase; color:#EBEBEC; backgrounds:url("images/topnav_left.gif") top left no-repeat transparent;}

@@ -85,7 +85,7 @@ $(document).ready(function() {
 <div class="wrapper row3">
   <div id="featured_slide_">
     <ul id="featured_slide_Content">
-      <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/selected photos/UCSC Building 3.jpg" alt="" /></a>
+      <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/selected photos/vision.jpg" alt="" /></a>
         <div class="introtext">
           <h2>Vision</h2>
           <p><?php echo $record['vision']?></p>
@@ -108,52 +108,12 @@ $(document).ready(function() {
   </div>
   <div id="hpage_featured_info" class="clear">
     <ul>
-      <li><a href="#"><img src="view/images/demo/undergraduate_programmes.jpg" alt="" /> <strong>Undergraduate Programmes</strong></a></li>
-      <li><a href="#"><img src="view/images/demo/postgraduate_programmes.jpg" alt="" /> <strong>Postgraduate Programmes</strong></a></li>
-      <li class="last"><a href="#"><img src="view/images/demo/external.jpg" alt="" /> <strong>External and Extension Programmes</strong></a></li>
+      <li><a href="view/pages/undergraduate_studies.php"><img src="view/images/demo/undergraduate_programmes.jpg" alt="" /> <strong>Undergraduate Programmes</strong></a></li>
+      <li><a href="view/pages/postgraduate_studies.php"><img src="view/images/demo/postgraduate_programmes.jpg" alt="" /> <strong>Postgraduate Programmes</strong></a></li>
+      <li class="last"><a href="view/pages/FIT.php"><img src="view/images/demo/external.jpg" alt="" /> <strong>External and Online Programmes</strong></a></li>
     </ul>
   </div>
 </div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row4">
-  <div id="quicknav" class="clear">
-    <ul>
-      <li><a href="#">Current Students</a>
-        <ul>
-          <li><a href="#">&raquo; Career Guidance Unit</a></li>
-          <li><a href="#">&raquo; Student Accommodation</a></li>
-          <li><a href="#">&raquo; Student Directory</a></li>
-          <li><a href="#">&raquo; Student Facilities</a></li>
-          <li class="last"><a href="#">&raquo; Students Union</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Prospective Students</a>
-        <ul>
-          <li><a href="#">&raquo; University Life</a></li>
-          <li><a href="#">&raquo; Academic Courses</a></li>
-          <li><a href="#">&raquo; How To Apply</a></li>
-          <li><a href="#">&raquo; Cost And Fees</a></li>
-          <li class="last"><a href="#">&raquo; Visit The University</a></li>
-        </ul>
-      </li>
-      <li><a href="#">International Students</a>
-        <ul>
-          <li><a href="#">&raquo; Why Our University</a></li>
-          <li><a href="#">&raquo; How To Apply</a></li>
-          <li class="last"><a href="#">&raquo; Cost &amp; Finances</a></li>
-        </ul>
-      </li>
-      <li class="last"><a href="#">Academic Departments</a>
-        <ul>
-          <li><a href="#">&raquo; Department of communication and media technologies(CMT)</a></li>
-          <li><a href="#">&raquo; Department of Information Systems Engineering(ISE)</a></li>
-          <li class="last"><a href="#">&raquo; Department of communication and intelligent systems (CIS)</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
 <div class="wrapper row5">
   <div id="container" class="clear"> 
     <!-- ####################################################################################################### -->
@@ -162,17 +122,17 @@ $(document).ready(function() {
         <ul id="hpage_latestnews">
           <li class="odd clear">
             <div class="imgholder"><img src="view/images/demo/faq.png" alt="" /></div>
-            <a href="#">Frequently Asked Questions</a>
+            <a href="view/pages/faq.php">Frequently Asked Questions</a>
             <p></p>
           </li>
           <li class="even clear">
             <div class="imgholder"><img src="view/images/demo/location.png" alt="" /></div>
-            <a href="#">Location</a>
+            <a href="#">Research</a>
             <p></p>
           </li>
           <li class="odd clear">
             <div class="imgholder"><img src="view/images/demo/uoc.png" alt="" /></div>
-            <a href="#">University of Colombo</a>
+            <a href="http://www.cmb.ac.lk/">University of Colombo</a>
             <p></p>
           </li>
           <li class="even clear">
@@ -182,7 +142,7 @@ $(document).ready(function() {
           </li>
           <li class="odd clear">
             <div class="imgholder"><img src="view/images/demo/wiki.png" alt="" /></div>
-            <a href="#">UCSC Wiki</a>
+            <a href="view/pages/resources.php">Resources</a>
             <p></p>
           </li>
           <li class="even clear">
