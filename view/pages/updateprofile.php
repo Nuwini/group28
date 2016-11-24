@@ -1,6 +1,11 @@
 <?php
-session_start();
-$userid = $_SESSION['login_user'];
+//session_start();
+if(isset($_SESSION)){
+$userid = $_SESSION['login_user'];	
+}else{
+	$userid='';
+}
+//session_write_close();
 ?>
 <html>
      <head>
@@ -22,23 +27,11 @@ $userid = $_SESSION['login_user'];
         <?php
             
             
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                //echo "connected successfully";
-                
+                include('../../model/config.php');
+				
                 $sql = "SELECT * FROM staff WHERE user_id='$userid'";
                 
-                $result = mysqli_query($conn, $sql);
+                $result = mysqli_query($connect, $sql);
                 if (!$result) {
                     echo "Error";
                     die();
@@ -47,15 +40,6 @@ $userid = $_SESSION['login_user'];
             
         ?>
 
-		
-
-		
-
-	
-                
-                
-                
-    
     <form method="post" action="changeuser.php">
 
     <div class="container">
@@ -81,7 +65,7 @@ $userid = $_SESSION['login_user'];
                                 <td><div class="form-group">
                                     <label for="full_name" class="col-lg-5 control-label">Full Name :</label><br /><br/>
                                     <label for="f_name" class="col-lg-5 control-label">First Name</label><br />
-                                        <inputrequired id="f_name" type="text" name="f_name" class="form-control" value="<?php echo $record['f_name']?>" style="width:400px"></div>
+                                        <input required id="f_name" type="text" name="f_name" class="form-control" value="<?php echo $record['f_name']?>" style="width:400px"></div>
                                     </td>
                                 
                                 <td><br /><br/><div class="form-group">

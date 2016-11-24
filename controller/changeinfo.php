@@ -15,7 +15,7 @@ include('../model/config.php');
                 $director_mg =$_POST['director_mg'];
                 
                
-                $sql = "INSERT INTO info (vision,mission,ucsc_description,goals,mailing_address,telephone,fax,email,union_activities,director_mg) VALUES ('$vision','$mission','$ucsc_description','$goals','$mailing_address','$telephone','$fax','$email','$union_activities','$director_mg')";
+                $sql = "UPDATE info set vision='$vision',mission='$mission',ucsc_description='$ucsc_description',goals='$goals',mailing_address='$mailing_address',telephone='$telephone',fax='$fax',email='$email',union_activities='$union_activities',director_mg='$director_mg'";
 
 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';
