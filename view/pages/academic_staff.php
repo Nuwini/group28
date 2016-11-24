@@ -24,7 +24,7 @@
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h3>Professors</h3>
+      <h3>Professor</h3>
 	  <?php
 	  
 	  $maxcols = 1;
