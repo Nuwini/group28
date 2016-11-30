@@ -22,11 +22,14 @@ $addr1 = $_POST['add_line1'];
 $addr2 = $_POST['add_line2'];
 $city = $_POST['city'];
 $country = $_POST['country'];
-$research = $_POST['research_interests'];
+$research = $_POST['research'];
 
-$sql = "UPDATE staff SET f_name='$fname',m_name='$mname',l_name='$lname',name_initials='$initials',nic='$nic',research_interests='$research',gender='$gender',email='$email',contact_no1='$tp1',contact_no2='$tp2',
-add_line1='$addr1',add_line2='$addr2',add_city='$city',add_country='$country',designation='$designation',dep_id='$department',center_id='$center',division_id='$division' WHERE user_id='$userid'";
+$sql = "UPDATE staff,academicemp_data SET staff.f_name='$fname',staff.m_name='$mname',staff.l_name='$lname',staff.name_initials='$initials',staff.nic='$nic',
+academicemp_data.research='$research',staff.gender='$gender',staff.email='$email',staff.contact_no1='$tp1',staff.contact_no2='$tp2',staff.add_line1='$addr1',
+staff.add_line2='$addr2',staff.add_city='$city',staff.add_country='$country',staff.designation='$designation',staff.dep_id='$department',
+staff.center_id='$center',staff.division_id='$division' WHERE staff.user_id=academicemp_data.user_id AND staff.user_id='$userid'";
 
+ 
 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';
 					echo 'alert("Successfully Updated!");';

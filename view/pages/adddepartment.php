@@ -7,18 +7,36 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/functions.js"></script>
         <script>
-              function phonenumber(telephone){  
-              var phoneno = /^\d{10}$/;  
-              if(telephone.value.match(phoneno))  
-              {  
-                  return true;  
-              }  
-              else  
-              {  
-                 alert("Please provide a valid Contact Number");  
-                 return false;  
-              }  
-              }  
+            function checkEmail() {
+                var email = $('#email').val();
+                $.ajax({
+                    url: "emailCheckdep.php",
+                    async: true,
+                    type: "POST",
+                    data: {email: email}
+                })
+                .done(function(data){
+                     if(data === 'fail') {
+                         alert("Email exists");
+                     }
+                });
+            }
+            
+                function phonenumber(telephone){  
+      var phoneno = /^\d{10}$/;  
+      if(telephone.value.match(phoneno))  
+      {  
+          return true;  
+      }  
+      else  
+      {  
+         alert("Please provide a valid Contact Number");  
+         return false;  
+      }  
+      }  
+        
+        
+        
         </script>
         <style>
             .radio-left {
@@ -26,7 +44,7 @@
             }
         </style>
         
-        <title>Edit General Information</title>
+        <title>Add Department</title>
     </head>
     <body>
         <?php
@@ -46,19 +64,18 @@
                 }
                 //echo "connected successfully";
                 
-                $vision = $_POST['vision'];
-                $mission = $_POST['mission'];
-                $description = $_POST['description'];
+                $id = $_POST['id'];
+                $name = $_POST['name'];
+                $location = $_POST['location'];
+                $head = $_POST['head'];
                 $telephone = $_POST['telephone'];
                 $fax= $_POST['fax'];
                 $email = $_POST['email'];
-                $goals = $_POST['goals'];
-                $mailing_add=$_POST['mailing_add'];
-                $union = $_POST['union'];
-                $directormsg =$_POST['directormsg'];
+                $website= $_POST['website'];
+                $image=$_POST['image'];
                 
                
-                $sql = "INSERT INTO info (vision,mission,ucsc_description,goals,mailing_address,telephone,fax,email,union_activities,director_msg) VALUES ('$vision','$mission','$description','$goals','$mailing_add','$telephone','$fax','$email','$union','$directormsg')";
+                $sql = "INSERT INTO department (dep_id,dep_name,location,dep_head,telephone,fax,email,website,image) VALUES ('$id','$name','$location','$head','$telephone','$fax','$email','$website','$image')";
                 if (mysqli_query($conn, $sql)) {
                     //echo "insert successful";
 				} else {
@@ -83,87 +100,79 @@
                     die("Connection faied: ".mysqli_connect_error());
                 }
         
+        $result=mysqli_query($conn, "SELECT count(*) as total from department");
+        $count = mysqli_fetch_assoc($result)['total'];
+        $count++;
+        $did = "D000" . strval($count);
         ?> 
         
         
         <div class="container" style='text-align:center;'>
-            <h2 style="margin-bottom:20px;">General Information</h2>
+            <h2 style="margin-bottom:20px;">Department</h2>
         <form class="form-horizontal"  method="post" action="">
             <div class="form-group">
-                 <label for="vision" class="col-sm-4 control-label">Vision</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="vision"></textarea>
+            <label for="id" class="col-sm-4 control-label">Department ID</label>
+                <div class="col-sm-3">
+            <input required class="form-control" type="text" name="id" value="<?php echo $did; ?>"><br>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                 <label for="name" class="col-sm-4 control-label">Department</label>
+                 <div class="col-sm-3">
+                     <input required class="form-control" type="text" name="name">
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="mission" class="col-sm-4 control-label">Mission</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="mission"></textarea>
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="description" class="col-sm-4 control-label">Description</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="description"></textarea>
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="directormsg" class="col-sm-4 control-label">Message from Director</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="directormsg"></textarea>
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="goals" class="col-sm-4 control-label">Goals</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="goals"></textarea>
-                 </div>
-            </div>
-            
-            <div class="form-group">
-                 <label for="mailing_add" class="col-sm-4 control-label">Address</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="mailing_add"></textarea>
+                 <label for="location" class="col-sm-4 control-label">Location</label>
+                 <div class="col-sm-3">
+                     <input required  class="form-control" type="text" name="location">
                  </div>
             </div>
             
             <div class="form-group">
                  <label for="telephone" class="col-sm-4 control-label">Contact number</label>
-                 <div class="col-sm-6">
+                 <div class="col-sm-3">
                      <input required class="form-control" type="text" name="telephone" onmouseleave="phonenumber(telephone)">
                  </div>
             </div>
             
              <div class="form-group">
                  <label for="fax" class="col-sm-4 control-label">Fax</label>
-                 <div class="col-sm-6">
+                 <div class="col-sm-3">
                      <input required  class="form-control" type="text" name="fax">
                  </div>
             </div>
             
             
+            <div class="form-group">
+                 <label for="head" class="col-sm-4 control-label">Head of the department</label>
+                 <div class="col-sm-3">
+                     <input class="form-control" type="text" name="head">
+                 </div>
+            </div>
+            
              <div class="form-group">
                  <label for="email" class="col-sm-4 control-label">Email</label>
-                 <div class="col-sm-6">
+                 <div class="col-sm-3">
                      <input class="form-control" type="email" name="email" oninput="checkEmail()">
                  </div>
             </div>
             
-            
             <div class="form-group">
-                 <label for="union" class="col-sm-4 control-label">Union activities</label>
-                 <div class="col-sm-6">
-                     <textarea required class="form-control" name="union"></textarea>
+                 <label for="website" class="col-sm-4 control-label">Web site</label>
+                 <div class="col-sm-3">
+                     <input class="form-control" type="url" name="website">
                  </div>
             </div>
             
-            
-            
-            
+            <div class="form-group">
+                 <label for="image" class="col-sm-4 control-label">Image</label>
+                 <div class="col-sm-3">
+                     <input  type="file" name="image">
+                 </div>
+            </div>
             
             <button type="submit" class="btn btn-default" style="margin-left:-133px;">Submit</button>
               

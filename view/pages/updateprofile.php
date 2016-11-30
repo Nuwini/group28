@@ -1,11 +1,6 @@
 <?php
-//session_start();
-if(isset($_SESSION)){
-$userid = $_SESSION['login_user'];	
-}else{
-	$userid='';
-}
-//session_write_close();
+session_start();
+$userid = $_SESSION['login_user'];
 ?>
 <html>
      <head>
@@ -28,19 +23,29 @@ $userid = $_SESSION['login_user'];
             
             
                 include('../../model/config.php');
-				
-                $sql = "SELECT * FROM staff WHERE user_id='$userid'";
                 
+                $sql = "SELECT staff.profile_pic,staff.f_name,staff.l_name,staff.name_initials,academicemp_data.research,staff.email,staff.contact_no,
+				staff.dep_id,staff.center_id,staff.division_id,academicemp_data.title,academicemp_data.qualifications,academicemp_data.bio,
+				academicemp_data.academic,academicemp_data.awards,academicemp_data.activity,academicemp_data.teaching,academicemp_data.employee,
+				academicemp_data.consulation,academicemp_data.projects,academicemp_data.fb,academicemp_data.linkedin,academicemp_data.scholar,
+				academicemp_data.research_gate,academicemp_data.location FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id 
+				where staff.user_id='$userid'";
+				
+				
                 $result = mysqli_query($connect, $sql);
                 if (!$result) {
                     echo "Error";
                     die();
 				}
                 $record = mysqli_fetch_assoc($result);
-            
+                       
         ?>
-
-    <form method="post" action="changeuser.php">
+        
+                
+                
+                
+    
+    <form method="post" action="../../controller/changeuser.php">
 
     <div class="container">
     <h1>Edit Profile</h1>
@@ -48,7 +53,7 @@ $userid = $_SESSION['login_user'];
 	<div class="row">
       <div class="col-md-3">
         <div class="text-center">
-          <img src="../img/3.jpg" class="avatar img-circle" alt="avatar">
+          <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['profile_pic']) . '"/>' ?>
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="profile_pic">
@@ -67,15 +72,31 @@ $userid = $_SESSION['login_user'];
                                     <label for="f_name" class="col-lg-5 control-label">First Name</label><br />
                                         <input required id="f_name" type="text" name="f_name" class="form-control" value="<?php echo $record['f_name']?>" style="width:400px"></div>
                                     </td>
-                                
-                                <td><br /><br/><div class="form-group">
-                                    <label for="m_name" class="col-lg-5 control-label">Middle Name</label><br /> 
-                                        <input required id="m_name" type="text" name="m_name"  class="form-control" value="<?php echo $record['m_name']?>" style="width:400px"></div></td>
-                                
+                                                                
                                 <td><br /><br/><div class="form-group">
                                     <label for="l_name" class="col-lg-5 control-label"> Last Name</label><br />
                                     <input required id="l_name" type="text" name="last_name" class="form-control" value="<?php echo $record['l_name']?>" style="width:400px"></div>
                                     </td>
+									
+									<td><br/><br/><div class="form-group">
+                <div class="col-sm-10">
+                    <label for="title" class="col-sm-10 control-label">Title</label><br/>   
+                    <select name="title" class="form-control" id="title">
+                    <option></option>
+                    <option <?php if($record['title'] == 'Mr') echo "selected"; ?> value="Mr">Mr</option>
+                    <option <?php if($record['title'] == 'Mrs') echo "selected"; ?> value="Mrs">Mrs</option>
+                    <option <?php if($record['title'] == 'Dr') echo "selected"; ?> value="Dr">Dr</option>
+                    <option <?php if($record['title'] == 'Prof') echo "selected"; ?> value="Prof">Prof</option>
+                    <option <?php if($record['title'] == 'Ms') echo "selected"; ?> value="Ms">Ms</option>
+                    </div> </div>
+                    </td>
+					
+					<td colspan="2"><div class="form-group">
+                            <label for="projects">Projects :</label>
+                            <textarea required class="form-control" id="projects" name="projects"><?php echo $record['projects']?></textarea>
+                            </div>
+                                </td>
+								
                             </tr>
                             
                              <tr>
@@ -83,46 +104,79 @@ $userid = $_SESSION['login_user'];
                                  <label for="name_initials" class="col-lg-6 control-label">Name with initials :</label><br /><br/> 
                                  <input required id="name_initials" type="text" name="name_initials" class="form-control" value="<?php echo $record['name_initials']?>" style="width:400px"></div>
                                  </td>
+								 
+								 <td colspan="2"><div class="form-group">
+                            <label for="qualifications">Qualifications :</label>
+                            <textarea required class="form-control" id="qualifications" name="qualifications"><?php echo $record['qualifications']?></textarea>
+                            </div>
+                                </td>
+								
+								<td colspan="2"><div class="form-group">
+                            <label for="activities">Activities :</label>
+                            <textarea required class="form-control" id="activities" name="activities"><?php echo $record['activities']?></textarea>
+                            </div>
+                                </td>
+								
+								<td><div class="form-group">
+                                 <label for="fb" class="col-lg-6 control-label">Facebook Profile :</label><br /><br/> 
+                                 <input required id="fb" type="text" name="fb" class="form-control" value="<?php echo $record['fb']?>" style="width:400px"></div>
+                                 </td>
                                  
-                                <td><div class="form-group"> 
-                                <label for="nic" class="col-sm-5 control-label">NIC : </label><br /><br/>
-                                    <input maxlength="10" required id="nic" type="text" name="nic" class="form-control" value="<?php echo $record['nic']?>" style="width:400px"></div></td>
-                            </tr> 
+                                </tr>
                             
-                            <tr>
-                                <td><div class="form-group">
-                                <label for="gender" class="col-sm-4 control-label">Gender :</label><br/><br/>
-                                <label class="radio-inline radio-left">
-                                <input <?php if($record['gender'] == 'male') echo "checked"; ?> type="radio" name="gender" id="gender" value="male"> Male</label>
-                                <label class="radio-inline radio-left">
-                                <input <?php if($record['gender'] == 'female') echo "checked"; ?> type="radio" name="gender" id="gender" value="female"> Female
-                                </label>
-                                </div></td>
-                            </tr>
-                            
+                                                       
                             <tr>
                                 <td colspan="2"><div class="form-group">
                                 <label for="email" class="col-sm-5 control-label">Email: </label><br /><br/> 
                                     <input required id="email" type="email" name="email" class="form-control" value="<?php echo $record['email']?>" style="width:400px"></div></td>
-                            </tr>
+                            
+								<td colspan="2"><div class="form-group">
+                            <label for="bio">Biography :</label>
+                            <textarea required class="form-control" id="bio" name="bio"><?php echo $record['bio']?></textarea>
+                            </div>
+                                </td>
+								
+								<td colspan="2"><div class="form-group">
+                            <label for="teaching">Teaching History :</label>
+                            <textarea required class="form-control" id="teaching" name="teaching"><?php echo $record['teaching']?></textarea>
+                            </div>
+                                </td>
+								
+								<td><div class="form-group">
+                                 <label for="linkedin" class="col-lg-6 control-label">LinkedIn Profile :</label><br /><br/> 
+                                 <input required id="linkedin" type="text" name="linkedin" class="form-control" value="<?php echo $record['linkedin']?>" style="width:400px"></div>
+                                 </td>
+								
+							</tr>
                             
                              <tr>
                                  <td><div class="form-group">
-                                 <label for="contactno_1" class="col-sm-5 control-label">Contact no 1 :</label><br />
-                                     <input maxlength="12" required id="contactno_1" type="text" name="contactno_1" class="form-control" value="<?php echo $record['contact_no1']?>" style="width:400px"></div></td>
-                                 <td><div class="form-group">
-                                 <label for="contactno_2" class="col-sm-5 control-label">Contact no 2 :</label><br />
-                                     <input maxlength="12" required id="contactno_2" type="text" name="contactno_2" class="form-control" value="<?php echo $record['contact_no2']?>" style="width:400px"></div></td>
-                            </tr>
+                                 <label for="contactno_1" class="col-sm-5 control-label">Contact no :</label><br />
+                                     <input required id="contactno_1" type="text" name="contactno_1" class="form-control" value="<?php echo $record['contact_no1']?>" style="width:400px"></div></td>
+                                 
+								 <td colspan="2"><div class="form-group">
+                            <label for="academic">Academic History :</label>
+                            <textarea required class="form-control" id="academic" name="academic"><?php echo $record['academic']?></textarea>
+                            </div>
+                                </td>
+								
+								<td colspan="2"><div class="form-group">
+                            <label for="employee">Employeement History :</label>
+                            <textarea required class="form-control" id="employee" name="employee"><?php echo $record['employee']?></textarea>
+                            </div>
+                                </td>
+								
+								<td><div class="form-group">
+                                 <label for="scholar" class="col-lg-6 control-label">Scholar :</label><br /><br/> 
+                                 <input required id="scholar" type="text" name="scholar" class="form-control" value="<?php echo $record['scholar']?>" style="width:400px"></div>
+                                 </td>
+								
+								 </tr>
                             
-                             <tr>
-                                 <td colspan="2"><div class="form-group">
-                                 <label for="designation" class="col-sm-5 control-label">Designation :</label><br /><br/>
-                                     <input required id="designation" type="text" name="designation" class="form-control" value="<?php echo $record['designation']?>" style="width:400px">
-									 
-									 </div></td>
-                            </tr>
-                            
+                                 
+								
+								
+								
                              <tr>
                             
                             <td><div class="form-group">
@@ -156,7 +210,7 @@ $userid = $_SESSION['login_user'];
                     <label for="center" class="col-sm-10 control-label">Center</label><br/>
                     <select name="center" class="form-control" id="dep_divi_center">
                     <option></option>
-                     <option <?php if($record['center_id'] == 'C0001') echo "selected"; ?> value="C0001">Advanced Digital Media Technology Center (ADMTC)</option>
+                    <option <?php if($record['center_id'] == 'C0001') echo "selected"; ?> value="C0001">Advanced Digital Media Technology Center (ADMTC)</option>
                     <option <?php if($record['center_id'] == 'C0002') echo "selected"; ?> value="C0002">Computing Services Center (CSC)</option>
                     <option <?php if($record['center_id'] == 'C0003') echo "selected"; ?> value="C0003">Digital Forensic Center (DFC)</option>
                     <option <?php if($record['center_id'] == 'C0004') echo "selected"; ?> value="C0004">E-learning Center (ELC)</option>
@@ -164,34 +218,33 @@ $userid = $_SESSION['login_user'];
                     <option <?php if($record['center_id'] == 'C0006') echo "selected"; ?> value="C0006">Professional Development Center (PDC)</option>
                 </select>
                     </div></div></td>
+					
+					<td><div class="form-group">
+                                 <label for="research_gate" class="col-lg-6 control-label">Research Gate :</label><br /><br/> 
+                                 <input required id="research_gate" type="text" name="research_gate" class="form-control" value="<?php echo $record['research_gate']?>" style="width:400px"></div>
+                                 </td>
+								 
              </tr>
             
-                            <tr>                          
-                    
-                                <td><div class="form-group">
-                                <label for="address" class="col-sm-5 control-label">Address : </label><br /><br/>
-                                <label for="add_line1" class="col-sm-5 control-label">Line 1</label><br /> 
-                                    <input required id="add_line1" type="text" name="add_line1" class="form-control" style="width:400px" value="<?php echo $record['add_line1']?>" ></div></td>
-                                <td><br /><br/><div class="form-group">
-                                <label for="add_line1" class="col-sm-5 control-label">Line 2</label><br />
-                                    <input required id="add_line2" type="text" name="add_line2" class="form-control" style="width:400px" value="<?php echo $record['add_line2']?>"></div>
-                            </td>
-                            </tr>
-                            <tr>
-                                <td><div class="form-group">
-                                <label for="city" class="col-sm-5 control-label"> City</label> <br /> 
-                                    <input required id="add_city" type="text" name="city" class="form-control" style="width:400px" value="<?php echo $record['add_city']?>"></div></td>
-                                <td><div class="form-group"> 
-                                <label for="country" class="col-sm-5 control-label">Country </label><br /> 
-                                    <input required id="add_country" type="text" name="country" class="form-control" style="width:400px" value="<?php echo $record['add_country']?>"></div></td>
-                            </tr>
-                            
                             <tr>
                             <td colspan="2"><div class="form-group">
                             <label for="research_interests">Research Interests :</label>
-                            <textarea required class="form-control" id="research_interests" name="research_interests"><?php echo $record['research_interests']?></textarea>
+                            <textarea required class="form-control" id="research" name="research"><?php echo $record['research']?></textarea>
                             </div>
                                 </td>
+								
+								<td colspan="2"><div class="form-group">
+                            <label for="awards">Awards:</label>
+                            <textarea required class="form-control" id="awards" name="awards"><?php echo $record['awards']?></textarea>
+                            </div>
+                                </td>
+								
+								<td colspan="2"><div class="form-group">
+                                <label for="consulation" class="col-sm-5 control-label">Consulation: </label><br /><br/> 
+                                    <input required id="consulation" type="text" name="consulation" class="form-control" value="<?php echo $record['consulation']?>" style="width:400px"></div></td>
+								
+								<input class="form-control" type="file" name="location">
+								
                             </tr>
                             
                             <tr>
