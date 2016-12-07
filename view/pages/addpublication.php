@@ -60,53 +60,53 @@
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Publications</h2>
-        <form class="form-horizontal"  method="post" action="">
+        <form method="post" action="">
             
             
             <div class="form-group">
-                 <label for="topic" class="col-sm-4 control-label">Title</label>
-                 <div class="col-sm-3">
+                 <label for="topic" class="col-sm-6 control-label">Title</label>
+                 <div class="col-sm-5">
                      <input required class="form-control" type="text" name="topic">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="date" class="col-sm-4 control-label">Date </label>
-                 <div class="col-sm-3">
+                 <label for="date" class="col-sm-6 control-label">Date </label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="date" name="date">
                  </div>
             </div>
             
             
              <div class="form-group">
-                 <label for="first_author" class="col-sm-4 control-label">First Author</label>
-                 <div class="col-sm-3">
+                 <label for="first_author" class="col-sm-6 control-label">First Author</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="first_author">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="collaborators" class="col-sm-4 control-label">Collaborators</label>
-                 <div class="col-sm-3">
+                 <label for="collaborators" class="col-sm-6 control-label">Collaborators</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="collaborators">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="research_group" class="col-sm-4 control-label">Research Group</label>
-                 <div class="col-sm-3">
+                 <label for="research_group" class="col-sm-6 control-label">Research Group</label>
+                 <div class="col-sm-5">
                      <input required class="form-control" type="text" name="research_group">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="pdf" class="col-sm-4 control-label">Publication</label>
-                 <div class="col-sm-3">
+                 <label for="pdf" class="col-sm-6 control-label">Publication</label>
+                 <div class="col-sm-5">
                      <input  type="file" name="pdf">
                  </div>
             </div>
     
-            <button type="submit" class="btn btn-default" style="margin-left:-133px;">Submit</button>
+            <button type="submit" class="btn btn-default" style="margin-left:200px;">Submit</button>
               
             </form>
         </div>

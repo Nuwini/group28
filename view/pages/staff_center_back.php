@@ -269,10 +269,10 @@ include '../../controller/del.php';
 				<option value = "courses"> courses </option>
 			</select>
 
-		<input type="submit" style="border-radius:6px;sh" value = "delete">
+		<input type="submit" style="border-radius:6px;sh" value="delete">
 		
-	 <form class="logout"  action="../../controller/logout.php"  method= "post">
-		<input type="submit" style="border-radius:6px;sh" value = "Logout">
+	 <form class="logout" action="../../controller/logout.php" method="post">
+		<input type="submit" style="border-radius:6px;sh" value="Logout">
 		</form>
 		
 			

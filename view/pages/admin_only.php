@@ -116,7 +116,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="admin_only.php?type=publication">Publication</div>
+        <div class="wp-menu-name">Publication</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -138,7 +138,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="admin_only.php?type=payment">Payment</div>
+        <div class="wp-menu-name">Payment</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -211,10 +211,10 @@ include '../../controller/del.php';
 <?php
 	if(isset($_GET['type'])){
 		if($_GET['type'] == 'update'){
-			require "updateprofile.php";
+			require "adminupdateprofile.php";
 		}
 		else if($_GET['type'] == 'updateinfo'){
-			require "generalInfo.php";
+			require "generalinfo.php";
 		}
 
 		else if($_GET['type'] == 'dep'){
@@ -273,19 +273,14 @@ include '../../controller/del.php';
 			</select>
 
 		<input type="submit" style="border-radius:6px;sh" value = "delete">
-		
-	 <form class="logout"  action="../../controller/logout.php"  method= "post">
-		<input type="submit" style="border-radius:6px;sh" value = "Logout">
+		<a href="../../controller/logout.php" class="button">Log Out</a>
 		</form>
 		
-			
-</form>
+		
+		
 
 
 		</div>
-</div>
-</body>
-
-<div>
+		</div>
 </body>
 </html>

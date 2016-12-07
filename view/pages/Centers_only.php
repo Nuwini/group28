@@ -43,7 +43,7 @@ include '../../controller/del.php';
         <li class="wp-first-item current">
 			<a href="#" class="wp-first-item current">My account</a></li>
         <li>
-			<a href="staff_center_back.php?type=update"  class="wp-first-item current">Updates</a></li>
+			<a href="Centers_only.php?type=update"  class="wp-first-item current">Updates</a></li>
     </ul>
 </li>
 <li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true">
@@ -92,7 +92,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name"><a href="staff_center_back.php?type=centers">Centres</a></div>
+        <div class="wp-menu-name"><a href="Centers_only.php?type=centers">Centres</a></div>
 
     </a>
 </li>
@@ -115,7 +115,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Publication</div>
+        <div class="wp-menu-name"><a href="Centers_only.php?type=publication">Publication</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -159,7 +159,7 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Reservations</div>
+        <div class="wp-menu-name"><a href="Centers_only.php?type=reservation">Reservations</div>
     </a>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
@@ -215,7 +215,13 @@ include '../../controller/del.php';
 
 		
 		else if($_GET['type'] == 'centers'){
-				require "addcenter.php";
+				require "C0001.php";
+		}
+		else if($_GET['type'] == 'publication'){
+				require "addpublication.php";
+		}
+		else if($_GET['type'] == 'reservation'){
+				require "reservationinternal.php";
 		}
 		else {
 			require "Centers_only.php";
@@ -230,23 +236,9 @@ include '../../controller/del.php';
 </div>
 <div id="navbarmini">
 		<div id="navbarwrap">
-			<form class="delete"  action="staff_center_back.php"  method= "post">
-			<br><input type= "text" style="border-radius:6px;" name = "searchText" placeholder="name">
-
-
-			<select id="adv" style="border-radius:6px;" name="select">
-				<option disabled selected value> search </option>
-				<option value = "staff"> staff </option>
-				<option value = "department">  departments </option>
-				<option value = "division"> division </option>
-				<option value = "centers"> centers </option>
-				<option value = "facilities"> facility </option>
-				<option value = "courses"> courses </option>
-			</select>
-
-		<input type="submit" style="border-radius:6px;sh" value = "delete">
+		<form class="delete"  action="staff_center_back.php"  method= "post">
+			<a href="../../controller/logout.php" class="button">Log Out</a>
 </form>
-
 		</div>
 </div>
 </body>

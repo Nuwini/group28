@@ -30,9 +30,19 @@
 			if ($count['designation']=='admin'){
 			
 			header("location:../view/pages/admin_only.php");	
-				} else if  ($count['designation']=='center coordinator') {
+				} else if ($count['designation']=='center coordinator'){
 					
 					header("location:../view/pages/Centers_only.php");
+					}else if ($count['designation']=='center coordinator' AND $count['center_id']=='C0002'){
+						header("location:../view/pages/Centers_only.php");
+					}else if ($count['designation']=='center coordinator' AND $count['center_id']=='C0003'){
+						header("location:../view/pages/Centers_only.php");
+					}else if ($count['designation']=='center coordinator' AND $count['center_id']=='C0004'){
+						header("location:../view/pages/Centers_only.php");
+					}else if ($count['designation']=='center coordinator' AND $count['center_id']=='C0005'){
+						header("location:../view/pages/Centers_only.php");
+					}else if ($count['designation']=='center coordinator' AND $count['center_id']=='C0006'){
+						header("location:../view/pages/Centers_only.php");
 					}
 					else {
 						header("location:../view/pages/staff_center_back.php");

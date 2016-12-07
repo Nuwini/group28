@@ -121,7 +121,7 @@
        <div class="container">
             <h2 style="margin-bottom:20px; text-align:center;">Statistical Details</h2>
         
-         <form class="form-horizontal"  method="post" action="">
+         <form method="post" action="">
         <div class="form group">
                 <label for="year" class="col-sm-4 control-label">Year</label>
                  <div class="col-sm-3">

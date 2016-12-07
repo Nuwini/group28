@@ -109,72 +109,72 @@
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Division</h2>
-        <form class="form-horizontal" name="division" method="post" action=""  >
+        <form name="division" method="post" action=""  >
             
             <div class="form-group">
-                <label for="id" class="col-sm-4 control-label">Division ID</label>
-                <div class="col-sm-3">
+                <label for="id" class="col-sm-6 control-label">Division ID</label>
+                <div class="col-sm-5">
                     <input type="text" name="" value="" hidden="true"><input class="form-control" type="text" name="id" value="<?php echo $divid; ?>"><br>
                 </div>
             </div>
             
             <div class="form-group">
-                 <label for="name" class="col-sm-4 control-label">Division</label>
-                 <div class="col-sm-3">
+                 <label for="name" class="col-sm-6 control-label">Division</label>
+                 <div class="col-sm-5">
                      <input required class="form-control" type="text" name="name">
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="location" class="col-sm-4 control-label">Location</label>
-                 <div class="col-sm-3">
+                 <label for="location" class="col-sm-6 control-label">Location</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="location">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="head" class="col-sm-4 control-label">Head of the Division</label>
-                 <div class="col-sm-3">
+                 <label for="head" class="col-sm-6 control-label">Head of the Division</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="head">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="telephone" class="col-sm-4 control-label">Contact number</label>
-                 <div class="col-sm-3">
+                 <label for="telephone" class="col-sm-6 control-label">Contact number</label>
+                 <div class="col-sm-5">
                      <input required id="telephone" class="form-control" type="text" name="telephone" onmouseleave="phonenumber(telephone)" >
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="fax" class="col-sm-4 control-label">Fax</label>
-                 <div class="col-sm-3">
+                 <label for="fax" class="col-sm-6 control-label">Fax</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="fax">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="email" class="col-sm-4 control-label">Email</label>
-                 <div class="col-sm-3">
+                 <label for="email" class="col-sm-6 control-label">Email</label>
+                 <div class="col-sm-5">
                      <input class="form-control" id="email" type="email" name="email" oninput="checkEmail()">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="website" class="col-sm-4 control-label">Web site</label>
-                 <div class="col-sm-3">
+                 <label for="website" class="col-sm-6 control-label">Web site</label>
+                 <div class="col-sm-5">
                      <input class="form-control" id="web_site" type="url" name="website">
                  </div>
             </div>
             
             <div class="form-group">
-                 <label for="image" class="col-sm-4 control-label">Image</label>
-                 <div class="col-sm-3">
+                 <label for="image" class="col-sm-6 control-label">Image</label>
+                 <div class="col-sm-5">
                      <input  type="file" name="image">
                  </div>
             </div>
     
-            <button type="submit"  class="btn btn-default" style="margin-left:-133px;">Submit</button>
+            <button type="submit"  class="btn btn-default" style="margin-left:200px;">Submit</button>
               
             </form>
         </div>

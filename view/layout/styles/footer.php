@@ -50,7 +50,7 @@ if (!$result1) {
     while($row = mysqli_fetch_assoc($result1)) {
 		
 		echo "<ul>";
-        echo "<li><a href='../pages/centres.php'>".$row["center_name"]."</a></li><br>";
+        echo "<li><a href='../pages/centers.php'>".$row["center_name"]."</a></li><br>";
 		echo "</ul>";
 	}
 }

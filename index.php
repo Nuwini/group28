@@ -57,6 +57,7 @@ $(document).ready(function() {
       <li><a href="view/pages/research_degrees.php"><strong>Education</strong></a></li>
       <li><a href="view/pages/academic_staff.php"><strong>People</strong></a></li>
       <li><a href="view/pages/gallery.php"><strong>Gallery</strong></a></li>
+	  <li><a href="view/pages/centers.php"><strong>Centers</strong></a></li>
       <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
       <li class="last"><a href="view/pages/contact_us.php"><strong>Contact Us</strong></a></li>
@@ -196,7 +197,7 @@ $(document).ready(function() {
     while($row = mysqli_fetch_assoc($result1)) {
 		
 		echo "<ul>";
-        echo "<li><a href='view/pages/centres.php'>".$row["center_name"]."</a></li><br>";
+        echo "<li><a href='view/pages/centers.php'>".$row["center_name"]."</a></li><br>";
 		echo "</ul>";
 	}
 }

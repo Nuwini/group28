@@ -73,17 +73,17 @@
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Reservation Form</h2>
-        <form class="form-horizontal"  method="post" action="">
+        <form method="post" action="">
             <div class="form-group">
-                 <label for="userid" class="col-sm-4 control-label">User ID</label>
-                 <div class="col-sm-3">
+                 <label for="userid" class="col-sm-6 control-label">User ID</label>
+                 <div class="col-sm-5">
                      <input required class="form-control" type="text" name="userid">
                  </div>
             </div>
             
              <div class="form-group">
-                 <label for="reservationid" class="col-sm-4 control-label">Reservation ID</label>
-                 <div class="col-sm-3">
+                 <label for="reservationid" class="col-sm-6 control-label">Reservation ID</label>
+                 <div class="col-sm-5">
                      <input required  class="form-control" type="text" name="reservationid">
                  </div>
             </div>
@@ -92,8 +92,8 @@
 	   <tr>
    	   <td>
 	    <div class="form-group">
-                 <label for="facilityname" class="col-sm-4 control-label">Facility Name</label>
-                 <div class="col-sm-3">
+                 <label for="facilityname" class="col-sm-6 control-label">Facility Name</label>
+                 <div class="col-sm-5">
                  <select>
                     <option value="f0001">Auditorium</option>
                     <option value="f0002">Digital Studio</option>
@@ -102,8 +102,8 @@
             </div></td>	    
             <td>
 	    <div class="form-group">
-                 <label for="facilityid" class="col-sm-4 control-label">Facility ID</label>
-                 <div class="col-sm-3">
+                 <label for="facilityid" class="col-sm-6 control-label">Facility ID</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="facilityid">
                  </div>
             </div></td>
@@ -113,37 +113,37 @@
             
             
              <div class="form-group">
-                 <label for="date" class="col-sm-4 control-label">Date</label>
-                 <div class="col-sm-3">
+                 <label for="date" class="col-sm-6 control-label">Date</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="date">
                  </div>
             </div>
             
 
              <div class="form-group">
-                 <label for="purpose" class="col-sm-4 control-label">Purpose</label>
-                 <div class="col-sm-3">
+                 <label for="purpose" class="col-sm-6 control-label">Purpose</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="purpose">
                  </div>
             </div>
  
 	    <div class="form-group">
-                 <label for="stime" class="col-sm-4 control-label">Start Time</label>
-                 <div class="col-sm-3">
+                 <label for="stime" class="col-sm-6 control-label">Start Time</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="stime">
                  </div>
             </div>
  
 	    <div class="form-group">
-                 <label for="etime" class="col-sm-4 control-label">End Time</label>
-                 <div class="col-sm-3">
+                 <label for="etime" class="col-sm-6 control-label">End Time</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="etime">
                  </div>
             </div>
 
 	    <div class="form-group">
-                 <label for="reservationfee" class="col-sm-4 control-label">Reservation Fee</label>
-                 <div class="col-sm-3">
+                 <label for="reservationfee" class="col-sm-6 control-label">Reservation Fee</label>
+                 <div class="col-sm-5">
                      <input class="form-control" type="text" name="reservationfee">
                  </div>
             </div>	    

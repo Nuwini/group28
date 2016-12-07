@@ -22,6 +22,7 @@
 	<li><a data-toggle="tab" href="#menu5">Canteen and Cafetaria</a></li>
     <li><a data-toggle="tab" href="#menu6">Wi-Fi Connectivity</a></li>
 	<li><a data-toggle="tab" href="#menu7">University Medical Services</a></li>
+	<li><a data-toggle="tab" href="#menu8">Reservation</a></li>
   </ul>
 <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
@@ -52,6 +53,11 @@ $all_profiles=mysqli_query($connect,$all_profiles_q);
       <h3>Menu 3</h3>
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
+	<!-- <div id="menu3" class="tab-pane fade">
+      <h3>Reservation</h3>
+      <?php require "calendar.php";?>
+    </div>
+	-->
   </div>
 </div>
 
