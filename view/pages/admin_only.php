@@ -108,17 +108,7 @@ include '../../controller/del.php';
         <div class="wp-menu-name"><a href="admin_only.php?type=facility">Facility</div>
     </a>
 </li>
-<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
-    <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
-            <div></div>
-        </div>
-        <div class="wp-menu-image dashicons-before dashicons-admin-page">
-            <br>
-        </div>
-        <div class="wp-menu-name">Publication</div>
-    </a>
-</li>
+
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
         <div class="wp-menu-arrow">
@@ -138,57 +128,15 @@ include '../../controller/del.php';
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
         </div>
-        <div class="wp-menu-name">Payment</div>
-    </a>
-</li>
-<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
-    <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
-            <div></div>
-        </div>
-        <div class="wp-menu-image dashicons-before dashicons-admin-page">
-            <br>
-        </div>
         <div class="wp-menu-name"><a href="admin_only.php?type=post">Posts</div>
     </a>
 </li>
-<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
-    <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
-            <div></div>
-        </div>
-        <div class="wp-menu-image dashicons-before dashicons-admin-page">
-            <br>
-        </div>
-        <div class="wp-menu-name">Reservations</div>
-    </a>
-</li>
-<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
-    <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
-            <div></div>
-        </div>
-        <div class="wp-menu-image dashicons-before dashicons-admin-page">
-            <br>
-        </div>
-        <div class="wp-menu-name">Visitor</div>
-    </a>
-</li>
+
 <li class="" aria-hidden="true">
     <div class="separator"></div>
 </li>
 
-<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
-    <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true">
-        <div class="wp-menu-arrow">
-            <div></div>
-        </div>
-        <div class="wp-menu-image dashicons-before dashicons-admin-users">
-            <br>
-        </div>
-        <div class="wp-menu-name">Users</div>
-    </a>
-</li>
+
 
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true">

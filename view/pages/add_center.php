@@ -47,9 +47,9 @@
             </div>
             
              <div class="form-group">
-                 <label for="location" class="col-sm-6 control-label">Location</label>
+                 <label for="center_location" class="col-sm-6 control-label">Location</label>
                  <div class="col-sm-5">
-                     <input required  class="form-control" type="text" name="location">
+                     <input required  class="form-control" type="text" name="center_location">
                  </div>
             </div>
             
@@ -84,7 +84,7 @@
             <div class="form-group">
                  <label for="website" class="col-sm-6 control-label">Web site</label>
                  <div class="col-sm-5">
-                     <input class="form-control" type="wrbsite" name="website">
+                     <input class="form-control" type="website" name="website">
                  </div>
             </div>
             
@@ -92,6 +92,13 @@
                  <label for="image" class="col-sm-6 control-label">Image</label>
                  <div class="col-sm-5">
                      <input  type="file" name="image">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="center_description" class="col-sm-6 control-label">Center Description</label>
+                 <div class="col-sm-5">
+                     <textarea required class="form-control" name="center_description" ></textarea>
                  </div>
             </div>
     

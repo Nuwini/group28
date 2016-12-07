@@ -1,3 +1,9 @@
+<?php
+session_start();
+$user_id = $_SESSION['login_user'];
+
+include('../../model/config.php');
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -46,7 +52,7 @@
             <div class="form-group">
                  <label for="uid" class="col-sm-4 control-label">User ID</label>
                  <div class="col-sm-3">
-                     <input required class="form-control" type="text" name="uid">
+                     <input required class="form-control" type="text" name="uid" value="<?php echo $user_id; ?>">
                  </div>
             </div>
             

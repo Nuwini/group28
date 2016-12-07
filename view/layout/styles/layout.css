@@ -7,7 +7,7 @@
 @import url("portfolio.css");
 @import url("featured_slide.css");
 .img{
-	left: -130px;
+	left: -50px;
 	width: 500px;
 	position: absolute;
 	top: 24px;

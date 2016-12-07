@@ -54,12 +54,13 @@ $(document).ready(function() {
     <ul>
       <li class="active"><a href="index.php"><strong>Home</strong></a></li>
       <li><a href="view/pages/about_us.php"><strong>About Us</strong></a></li>
-      <li><a href="view/pages/research_degrees.php"><strong>Education</strong></a></li>
+      <li><a href="view/pages/education.php"><strong>Education</strong></a></li>
       <li><a href="view/pages/academic_staff.php"><strong>People</strong></a></li>
       <li><a href="view/pages/gallery.php"><strong>Gallery</strong></a></li>
 	  <li><a href="view/pages/centers.php"><strong>Centers</strong></a></li>
       <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
+	  <li><a href="http://ucsc.cmb.ac.lk/alumni/"><strong>Alumni</strong></a></li>
       <li class="last"><a href="view/pages/contact_us.php"><strong>Contact Us</strong></a></li>
     </ul>
   </div>

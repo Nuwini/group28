@@ -32,7 +32,7 @@
         <?php
         
             include('../../model/config.php');
-			$sql="select vision,mission,ucsc_description,goals,mailing_address,telephone,fax,email,union_activities,director_mg from info";
+			$sql="select vision,mission,ucsc_description,goals,mailing_address,telephone,fax,email,union_activities,director_mg,image1,image2,image3 from info";
 			$result = mysqli_query($connect, $sql);
                 if (!$result) {
                     echo "Error";
@@ -52,7 +52,6 @@
                      <textarea required class="form-control" name="vision" ><?php echo $record['vision']?></textarea>
                  </div>
             </div>
-            
              <div class="form-group">
                  <label for="mission" class="col-sm-6 control-label">Mission</label>
                  <div class="col-sm-5">
@@ -117,6 +116,42 @@
                      <textarea required class="form-control" name="union_activities" ><?php echo $record['union_activities']?></textarea>
                  </div>
             </div>
+			
+			
+                 <div class="form-group">
+                 <label for="image1" class="col-sm-6 control-label">Slider Image 1</label>
+                 <div class="col-sm-5">
+                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image1']) . '"/>' ?>
+          <h6>Upload a different photo...</h6>
+          
+          <input class="form-control" type="file" name="image1">
+                 </div>
+            </div>
+			
+			
+        			<div class="form-group">
+                 <label for="image2" class="col-sm-6 control-label">Slider Image 2</label>
+                 <div class="col-sm-5">
+                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image2']) . '"/>' ?>
+          <h6>Upload a different photo...</h6>
+          
+          <input class="form-control" type="file" name="image2">
+                 </div>
+            </div>
+			
+			<div class="form-group">
+                 <label for="image3" class="col-sm-6 control-label">Slider Image 3</label>
+                 <div class="col-sm-5">
+                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image3']) . '"/>' ?>
+          <h6>Upload a different photo...</h6>
+          
+          <input class="form-control" type="file" name="image3">
+                 </div>
+            </div>
+			
+			
+			
+			
             
             
             

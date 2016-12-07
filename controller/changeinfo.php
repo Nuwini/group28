@@ -13,9 +13,14 @@ include('../model/config.php');
                 $mailing_address=$_POST['mailing_address'];
                 $union_activities = $_POST['union_activities'];
                 $director_mg =$_POST['director_mg'];
+				$image1=$_POST['image1'];
+				$image2=$_POST['image2'];
+				$image3=$_POST['image3'];
                 
                
-                $sql = "UPDATE info set vision='$vision',mission='$mission',ucsc_description='$ucsc_description',goals='$goals',mailing_address='$mailing_address',telephone='$telephone',fax='$fax',email='$email',union_activities='$union_activities',director_mg='$director_mg'";
+                $sql = "UPDATE info set vision='$vision',mission='$mission',ucsc_description='$ucsc_description',goals='$goals',
+				mailing_address='$mailing_address',telephone='$telephone',fax='$fax',email='$email',union_activities='$union_activities',
+				director_mg='$director_mg',image1='$image1',image2='$image2',image3='$image3'";
 
 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';

@@ -21,46 +21,7 @@ $(document).ready(function() {
 </head>
 <body id="top">
 <?php include('../layout/styles/header.php');?>
-<div class="wrapper row4">
-  <div id="quicknav" class="clear">
-  
-    <ul>
-      <li><a href="#">Current Students</a>
-        <ul>
-          
-          <li><a href="#">&raquo; Career Guidance Unit</a></li>
-          <li><a href="#">&raquo; Student Accommodation</a></li>
-          <li><a href="#">&raquo; Student Directory</a></li>
-          <li><a href="#">&raquo; Student Facilities</a></li>
-          <li class="last"><a href="#">&raquo; Students Union</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Prospective Students</a>
-        <ul>
-          <li><a href="#">&raquo; University Life</a></li>
-          <li><a href="#">&raquo; Academic Courses</a></li>
-          <li><a href="#">&raquo; How To Apply</a></li>
-          <li><a href="#">&raquo; Cost And Fees</a></li>
-          <li><a href="#">&raquo; Vvisit the University</a></li>
-          </ul>
-      </li>
-      <li><a href="#">International Students</a>
-        <ul>
-          <li><a href="#">&raquo; Why our University </a></li>
-          <li><a href="#">&raquo; How to Apply</a></li>
-          <li class="last"><a href="#">&raquo; Cost &amp; Finances</a></li>
-        </ul>
-      </li>
-      <li class="last"><a href="#">Academic Departments</a>
-        <ul>
-          <li><a href="#">&raquo; Department of communication and media technologies(CMT)</a></li>
-          <li><a href="#">&raquo; Department of Information Systems Engineering(ISE)</a></li>
-<li class="last"><a href="#">&raquo; Department of communication and intelligent systems (CIS)</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+<hr>
 <!-- ####################################################################################################### -->
 <div class="wrapper row5">
   <div id="container" class="clear"> 
