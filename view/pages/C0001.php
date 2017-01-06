@@ -108,8 +108,9 @@ $user_id = $_SESSION['login_user'];
             <div class="form-group">
                  <label for="image" class="col-sm-6 control-label">Image</label>
                  <div class="col-sm-5">
-                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image']) . '"/>' ?>
-          <h6>Upload a different photo...</h6>
+                     <?php echo '<img class="avatar img-circle" alt="avatar" src="../images/demo/'.$record['image'].'"/>' ?>
+					 
+					 <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="image">
                  </div>

@@ -3,10 +3,10 @@
     <ul>
       <li class="active"><a href="../../index.php"><strong>Home</strong></a></li>
       <li><a href="about_us.php"><strong>About Us</strong></a></li>
-      <li><a href="view/pages/full-width1.html"><strong>Education</strong></a></li>
+      <li><a href="education.php"><strong>Education</strong></a></li>
       <li><a href="view/pages/profile.php"><strong>People</strong></a></li>
-      <li><a href="view/pages/gallery.html"><strong>Gallery</strong></a></li>
-	  <li><a href="view/pages/centers.php"><strong>Centers</strong></a></li>
+      <li><a href="gallery.php"><strong>Gallery</strong></a></li>
+	  <li><a href="centers.php"><strong>Centers</strong></a></li>
       <li><a href="view/pages/facilities.php"><strong>Facilities</strong></a></li>
       <li><a href="view/pages/achievements.php"><strong>News/Notices</strong></a></li>
       <li class="last"><a href="contact_us.php"><strong>Contact Us</strong></a></li>

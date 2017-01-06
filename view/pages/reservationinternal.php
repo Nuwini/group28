@@ -5,149 +5,152 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <script src="../js/jquery-2.0.0.js"></script>
         <script src="../js/bootstrap.min.js"></script>
+        <script src="moment.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker3.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css">
+        <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/js/bootstrap-datetimepicker.min.js"></script>
+       
         
         <style>
             .radio-left {
                 float: left;
             }
         </style>
-        
-        <title>Reservation Form</title>
+       
+    <title>Reservation Form</title>
     </head>
     <body>
         <?php
-        
-            if($_SERVER["REQUEST_METHOD"] == "POST") {
-                $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
-
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
-
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-                //echo "connected successfully";
-
-                $userid = $_POST['userid'];
-                $reservationid = $_POST['reservationid'];
-                $facilityname = $_POST['facilityname'];
-		$date = $_POST['date'];		
-		$purpose = $_POST['purpose'];               
-		$stime = $_POST['stime'];
-		$etime = $_POST['etime'];
-		$reservationfee = $_POST['reservationfee'];
-		$facilityid = $_POST['facilityid'];
-
-                $sql = "INSERT INTO reservation (r_id,facility_id,r_date,purpose,start_time,end_time,user_id,r_fee) VALUES ('$reservationid','$facilityid','$date','$purpose','$stime','$etime','$userid','$reservationfee')";
-                if (mysqli_query($conn, $sql)) {
-                    //echo "insert successful";
-				} else {
-                    //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                } 
-
+        $server = 'localhost';
+        $username = 'root';
+        $password = '';
+        $database = 'ucsc';
+        //create connection
+        $conn = mysqli_connect($server, $username, $password, $database);
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            //check connection
+            if (!$conn){
+                die("Connection faied: ".mysqli_connect_error());
             }
-        ?>
-        
-         <?php
-        
-            $server = 'localhost';
-                $username = 'root';
-                $password = '';
-                $database = 'ucsc';
+            //echo "connected successfully";
 
-                //create connection
-                $conn = mysqli_connect($server, $username, $password, $database);
+            $userid = $_POST['userid'];
+            $reservationid = $_POST['reservationid'];
+            $facilityname = $_POST['facilityid'];
+            $purpose = $_POST['purpose'];               
+            $start = $_POST['start'];
+            $end = $_POST['end'];
+            $reservationfee = $_POST['reservationfee'];
+            $type="internal";
 
-                //check connection
-                if (!$conn){
-                    die("Connection faied: ".mysqli_connect_error());
-                }
-        
-        
-        ?> 
-        
+            $sql = "INSERT INTO reservation (r_id,facility_id,start,end,purpose,user_id,r_fee,type) VALUES ('$reservationid','$facilityname','$start','$end','$purpose','$userid','$reservationfee','$type')";
+            if (mysqli_query($conn, $sql)) {
+
+                //echo "insert successful";
+            } else {
+                //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            } 
+        }
+        $result=mysqli_query($conn, "SELECT count(*) as total from reservation");
+        $count = mysqli_fetch_assoc($result)['total'];
+        $count++;
+        $rid= "R000" . strval($count);
+
+    ?>
+
         
         <div class="container" style='text-align:center;'>
             <h2 style="margin-bottom:20px;">Reservation Form</h2>
-        <form method="post" action="">
+        <form class="form-horizontal"  method="post" action="">
+
+
+   
+             <div class="form-group">
+                 <label for="reservationid" class="col-sm-4 control-label">Reservation ID</label>
+                 <div class="col-sm-3">
+                     <input required  class="form-control" type="text" name="reservationid" value="<?php echo $rid; ?>">
+                 </div>
+            </div>
+
             <div class="form-group">
-                 <label for="userid" class="col-sm-6 control-label">User ID</label>
-                 <div class="col-sm-5">
+                 <label for="userid" class="col-sm-4 control-label">User ID</label>
+                 <div class="col-sm-3">
                      <input required class="form-control" type="text" name="userid">
                  </div>
             </div>
-            
+         
              <div class="form-group">
-                 <label for="reservationid" class="col-sm-6 control-label">Reservation ID</label>
-                 <div class="col-sm-5">
-                     <input required  class="form-control" type="text" name="reservationid">
-                 </div>
-            </div>
-          
-	<table class="table">
-	   <tr>
-   	   <td>
-	    <div class="form-group">
-                 <label for="facilityname" class="col-sm-6 control-label">Facility Name</label>
-                 <div class="col-sm-5">
-                 <select>
-                    <option value="f0001">Auditorium</option>
-                    <option value="f0002">Digital Studio</option>
-                </select>
-                 </div>
-            </div></td>	    
-            <td>
-	    <div class="form-group">
-                 <label for="facilityid" class="col-sm-6 control-label">Facility ID</label>
-                 <div class="col-sm-5">
-                     <input class="form-control" type="text" name="facilityid">
-                 </div>
-            </div></td>
-	    </tr>	
-	</table>
-  
-            
-            
-             <div class="form-group">
-                 <label for="date" class="col-sm-6 control-label">Date</label>
-                 <div class="col-sm-5">
-                     <input class="form-control" type="text" name="date">
+                 <label for="facilityname" class="col-sm-4 control-label">Facility</label>
+                 <div class="col-sm-3">
+                    <select name="facilityid" class="form-control">
+                    <?php
+                    $facilities = mysqli_query($conn, "select * from facilities");
+                    if (mysqli_num_rows($facilities) > 0) {
+                        while($row = mysqli_fetch_assoc($facilities)) {
+                            echo "<option value='" . $row["facility_id"] . "'>" . $row["facility_name"]. "</option>";
+                        }
+                    }
+                    ?>
+                	</select>
                  </div>
             </div>
             
 
              <div class="form-group">
-                 <label for="purpose" class="col-sm-6 control-label">Purpose</label>
-                 <div class="col-sm-5">
+                 <label for="purpose" class="col-sm-4 control-label">Purpose</label>
+                 <div class="col-sm-3">
                      <input class="form-control" type="text" name="purpose">
                  </div>
             </div>
- 
-	    <div class="form-group">
-                 <label for="stime" class="col-sm-6 control-label">Start Time</label>
-                 <div class="col-sm-5">
-                     <input class="form-control" type="text" name="stime">
-                 </div>
-            </div>
- 
-	    <div class="form-group">
-                 <label for="etime" class="col-sm-6 control-label">End Time</label>
-                 <div class="col-sm-5">
-                     <input class="form-control" type="text" name="etime">
-                 </div>
-            </div>
 
-	    <div class="form-group">
-                 <label for="reservationfee" class="col-sm-6 control-label">Reservation Fee</label>
-                 <div class="col-sm-5">
+            
+
+             <div class="form-group">
+                 <label for="start" class="col-sm-4 control-label">Start</label>
+                 <div class="col-sm-3">
+                    <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name="start" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker1').datetimepicker({
+                                format : 'YYYY/MM/DD, HH:mm'
+                            });
+                        });
+                    </script>
+                 </div>
+             </div>
+            
+            <div class="form-group">
+                 <label for="end" class="col-sm-4 control-label">End</label>
+                 <div class="col-sm-3">
+                    <div class='input-group date' id='datetimepicker2'>
+                    <input type='text' class="form-control" name="end" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepicker2').datetimepicker({
+                                format : 'YYYY/MM/DD, HH:mm'
+                            });
+                        });
+                    </script>
+                 </div>
+             </div>
+            
+	    
+	      <div class="form-group">
+                 <label for="reservationfee" class="col-sm-4 control-label">Reservation Fee</label>
+                 <div class="col-sm-3">
                      <input class="form-control" type="text" name="reservationfee">
                  </div>
-            </div>	    
-	    <button type="submit & pay" class="btn btn-default" style="margin-left:-133px;">Submit and Pay</button>
+          </div>
+            
+	      <button type="submit & pay" class="btn btn-default" style="margin-left:-133px;">Submit</button>
               
             </form>
         </div>

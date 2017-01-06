@@ -43,7 +43,7 @@
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	echo "<tr>";
-        echo '<td><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -88,7 +88,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td rowspan=2><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -133,7 +133,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td rowspan=2><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -177,7 +177,7 @@ echo "</table>";
     
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
-        echo '<td rowspan=2><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -222,7 +222,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td rowspan=2><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -267,7 +267,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td rowspan=2><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -312,7 +312,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	echo "<tr>";
-        echo '<td><img src="data:image/jpeg;base64,' . base64_encode($profile_info['image']) . '"/></td>';
+        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";

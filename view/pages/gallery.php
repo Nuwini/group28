@@ -24,13 +24,13 @@ $(document).ready(function() {
 <hr>
 <!-- ####################################################################################################### -->
 <div class="wrapper row5">
-  <div id="container" class="clear"> 
+  <div id="container" class="clear" width="100%"> 
     <!-- ####################################################################################################### -->
     <div id="gallery"> 
       <!-- ########### -->
       <div class="gallerycontainer clear">
-        <div class="fl_right">
-          <ul>
+        <div>
+         <!-- <ul>
             <li><a href="../images/demo/trip.png" title="Image 1"><img src="../images/demo/trip.png" alt="Title Here" /></a></li>
             <li><a href="../images/demo/blood.png" title="Image 2"><img src="../images/demo/blood.png" alt="Title Here" /></a></li>
             <li><a href="../images/demo/poson.png"  title="Image 3"><img src="../images/demo/poson.png" alt="Title Here" /></a></li>
@@ -40,6 +40,34 @@ $(document).ready(function() {
             <li><a href="../images/demo/awurudu.png"  title="Image 7"><img src="../images/demo/awurudu.png" alt="Title Here" /></a></li>
             <li class="last"><a href="../images/demo/pahasara.png"  title="Image 8"><img src="../images/demo/pahasara.png" alt="Title Here" /></a></li>
           </ul>
+		  -->
+		  <?php
+$folder_path = '../images/gallery/'; //image's folder path
+
+$num_files = glob($folder_path . "*.{JPG,jpg,gif,png,bmp}", GLOB_BRACE);
+
+$folder = opendir($folder_path);
+ 
+if($num_files > 0)
+{
+ while(false !== ($file = readdir($folder))) 
+ {
+  $file_path = $folder_path.$file;
+  $extension = strtolower(pathinfo($file ,PATHINFO_EXTENSION));
+  if($extension=='jpg' || $extension =='png' || $extension == 'gif' || $extension == 'bmp') 
+  {
+   ?>
+            <a href="<?php echo $file_path; ?>"><img src="<?php echo $file_path; ?>"  height="200" /></a>
+            <?php
+  }
+ }
+}
+else
+{
+ echo "the folder was empty !";
+}
+closedir($folder);
+?>
         </div>
       </div>
       <!-- ########### --> 

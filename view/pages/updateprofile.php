@@ -48,7 +48,7 @@ $userid = $_SESSION['login_user'];
 	<div class="row">
       <div class="col-md-3">
         <div class="text-center">
-          <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['profile_pic']) . '"/>' ?>
+					  <?php echo '<img width="40%" class="avatar img-circle" alt="avatar" src="../images/demo/' . $record['profile_pic'] . '"/>' ?>
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="profile_pic">

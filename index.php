@@ -87,19 +87,19 @@ $(document).ready(function() {
 <div class="wrapper row3">
   <div id="featured_slide_">
     <ul id="featured_slide_Content">
-      <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/selected photos/vision.jpg" alt="" /></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image1'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Vision</h2>
-          <p><?php echo $record['vision']?></p>
+          <p><?php echo $record['vision']; ?></p>
         </div>
       </li>
-      <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/12.png" alt="" /></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image2'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Mission</h2>
           <p><?php echo $record['mission']?></p>
         </div>
       </li>
-      <li class="featured_slide_Image"><a href="#"><img src="view/images/demo/13.jpeg" alt="" /></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image3'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Message from the Director</h2>
           <p></p>

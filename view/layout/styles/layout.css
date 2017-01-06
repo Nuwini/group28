@@ -30,7 +30,9 @@ html[xmlns] .clear{display:block;}
 a{outline:none; text-decoration:none;}
 
 .fl_left, .imgl{float:left;}
-.fl_right, .imgr{float:right;}
+.fl_right, .imgr{
+	float:right;
+	}
 
 img{margin:0; padding:0; border:none;}
 .imgholder, .imgl, .imgr{padding:4px; border:1px solid #D8D8D8; text-align:center;}

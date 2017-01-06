@@ -46,8 +46,9 @@ $i = 0;
 			
 	echo "<tr>";
 	
-        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
-		echo "<td>".$profile_info['name_initials']."</td>";
+         echo '<td rowspan=5><img src="../images/demo/'. $profile_info['profile_pic'] .'"/></td>';
+		 
+			echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['designation']."</td>";
@@ -94,7 +95,7 @@ $i = 0;
 			
 	echo "<tr>";
 	
-        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+        echo '<td rowspan=5><img src="../images/demo/'. $profile_info['profile_pic'] .'"/></td>';
 		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
@@ -142,7 +143,7 @@ $i = 0;
 			
 	echo "<tr>";
 	
-        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+        echo '<td rowspan=5><img src="../images/demo/'. $profile_info['profile_pic'] .'"/></td>';
 		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";
@@ -190,7 +191,7 @@ $i = 0;
 			
 	echo "<tr>";
 	
-        echo '<td rowspan=5><img src="data:image/jpeg;base64,' . base64_encode($profile_info['profile_pic']) . '"/></td>';
+        echo '<td rowspan=5><img src="../images/demo/'. $profile_info['profile_pic'] .'"/></td>';
 		echo "<td>".$profile_info['name_initials']."</td>";
 		echo "</tr>";
 		echo "<tr>";

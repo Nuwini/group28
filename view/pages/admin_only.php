@@ -1,5 +1,5 @@
 <?php
-include '../../model/config.php';
+//include '../../model/config.php';
 include '../../controller/del.php';
 //include '../../controller/logout.php';
 ?>
@@ -87,15 +87,19 @@ include '../../controller/del.php';
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
+        <!-- <div class="wp-menu-arrow">
             <div></div>
         </div>
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
-        </div>
-        <div class="wp-menu-name"><a href="admin_only.php?type=centers">Centres</a></div>
-
-    </a>
+        </div> -->
+        <div class="wp-menu-name">Center</div>
+    <!-- </a> -->
+	<ul>
+	<li><a href="admin_only.php?type=center1">View & Edit</a></li>
+	<li><a href="admin_only.php?type=center">Add</a>
+	</li>
+	</ul>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
@@ -111,14 +115,19 @@ include '../../controller/del.php';
 
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
-        <div class="wp-menu-arrow">
+        <!-- <div class="wp-menu-arrow">
             <div></div>
         </div>
         <div class="wp-menu-image dashicons-before dashicons-admin-page">
             <br>
-        </div>
-        <div class="wp-menu-name"><a href="admin_only.php?type=course">Course</div>
-    </a>
+        </div> -->
+        <div class="wp-menu-name">Course</div>
+    <!-- </a> -->
+	<ul>
+	<li><a href="admin_only.php?type=course1">View & Edit</a></li>
+	<li><a href="admin_only.php?type=course">Add</a>
+	</li>
+	</ul>
 </li>
 <li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
     <a href="" class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true">
@@ -131,6 +140,8 @@ include '../../controller/del.php';
         <div class="wp-menu-name"><a href="admin_only.php?type=post">Posts</div>
     </a>
 </li>
+
+
 
 <li class="" aria-hidden="true">
     <div class="separator"></div>
@@ -171,8 +182,11 @@ include '../../controller/del.php';
 		else if($_GET['type'] == 'divi'){
 				require "adddivision.php";
 		}
-		else if($_GET['type'] == 'centers'){
+		else if($_GET['type'] == 'center'){
 				require "add_center.php";
+		}
+		else if($_GET['type'] == 'center1'){
+				require "view_edit_center.php";
 		}
 		else if($_GET['type'] == 'facility'){
 				require "add_facility.php";
@@ -182,6 +196,9 @@ include '../../controller/del.php';
 		}
 		else if($_GET['type'] == 'course'){
 				require "courses.php";
+		}
+		else if($_GET['type'] == 'course1'){
+				require "view_edit_course.php";
 		}
 		else if($_GET['type'] == 'payment'){
 				require "paymentstaff.php";
@@ -195,6 +212,7 @@ include '../../controller/del.php';
 		else if($_GET['type'] == 'stats'){
 				require "statisticaldetails.php";
 		}
+		
 
 	}
 	else{

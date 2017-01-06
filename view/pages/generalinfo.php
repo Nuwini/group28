@@ -121,7 +121,9 @@
                  <div class="form-group">
                  <label for="image1" class="col-sm-6 control-label">Slider Image 1</label>
                  <div class="col-sm-5">
-                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image1']) . '"/>' ?>
+					  <?php echo $record['image1']; ?>
+					  <?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image1'] . '"/>' ?>
+                      
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="image1">
@@ -132,7 +134,8 @@
         			<div class="form-group">
                  <label for="image2" class="col-sm-6 control-label">Slider Image 2</label>
                  <div class="col-sm-5">
-                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image2']) . '"/>' ?>
+				 <?php echo $record['image2']; ?>
+                     <?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image1'] . '"/>' ?>
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="image2">
@@ -142,7 +145,8 @@
 			<div class="form-group">
                  <label for="image3" class="col-sm-6 control-label">Slider Image 3</label>
                  <div class="col-sm-5">
-                     <?php echo '<img class="avatar img-circle" alt="avatar" src="data:image/jpeg;base64,' . base64_encode($record['image3']) . '"/>' ?>
+				 <?php echo $record['image3']; ?>
+                     <?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image1'] . '"/>' ?>
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="image3">

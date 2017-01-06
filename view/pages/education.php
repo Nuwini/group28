@@ -26,7 +26,7 @@
       <h3>Computer Science (CS)</h3>
 	  <?php
 	  
-	  $all_profiles_q="SELECT course_name,course_coordinator,degreeProgramme FROM courses where course_id='C001'";
+	  $all_profiles_q="SELECT course_name,course_coordinator,degreeProgramme FROM courses where course_id='C002'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
@@ -58,7 +58,7 @@
       <h3>Information Systems (IS)</h3>
 	  <?php
 	  
-	  $all_profiles_q="SELECT course_name,course_coordinator,degreeProgramme FROM courses where course_id='C002'";
+	  $all_profiles_q="SELECT course_name,course_coordinator,degreeProgramme FROM courses where course_id='C001'";
 
         $all_profiles=mysqli_query($connect,$all_profiles_q);
 		
