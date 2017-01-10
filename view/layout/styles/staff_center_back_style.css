@@ -1,15 +1,15 @@
 .container23 {
-  
+
   margin-top:9%;
   margin-left:calc(100%-160px);
   position:relative;
-  
-  
+
+
 }
 div.scroll {
   float:left;
   height: 1000px;
-  
+
 }
 
 
@@ -70,7 +70,7 @@ html {
     width: 130px;
 	margin-top:-120;
     background-color: #23282d;
-	
+
 }
 
 #adminmenuback {
@@ -268,7 +268,7 @@ ul {
 #navbar .wp-submenu,
 #navbar,
 #navbarwrap {
-	
+
     width:100%;
 	height:9%;
     background-color: #23282d;
@@ -284,7 +284,10 @@ ul {
 .folded #navbarwrap {
     width: 500px
 }*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> Monolithic commit
 
 .delete{
 	z-index:5;

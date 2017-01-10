@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
-	
+
 	<link rel="stylesheet" href="../layout/styles/style.css" type="text/css">
 </head>
 <body>
@@ -27,5 +27,13 @@
 			</ul>
 		</form>
 	</section>
+
+	<?php
+
+	$res1 =  mysqli_fetch_assoc(mysqli_query($conn,"select name_initials from staff where user_id = '$userid' "));
+	$_SESSION['name_initials']= $res1['fullname'];
+
+
+	 ?>
 </body>
 </html>

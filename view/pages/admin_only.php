@@ -1,3 +1,13 @@
+<?php
+include ('../../model/config.php');
+ ?>
+<?php
+session_start();
+$userid= $_SESSION['login_user'];
+ ?>
+
+
+
 <html>
 <head>
 <title>UCSC | Admin Panel
@@ -22,9 +32,6 @@
 	margin-top:35px;
 }
 </style>
-
-</head>
-<body style="margin:0;padding:0;">
 <style>
 
     #menu{
@@ -33,7 +40,35 @@
         color: white;
     }
 </style>
-<div class="nav">
+
+</head>
+<body style="margin:0;padding:0;">
+	<div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="userid">
+			<div class="sessionid">
+						<div style="padding-top: 12px; float: left; height: 1.2em; background-color:# fff; color: white; font-weight: bold;font-size:1.2em;">
+							<?php
+							$res1 =  mysqli_fetch_assoc(mysqli_query($connect,"select name_initials,profile_pic from staff where user_id = '$userid' "));
+							 ?>
+							<?php
+							echo $res1['name_initials'];
+							?>
+						</div></br>
+						<div style="position: absolute; padding-top: 10px; float: left; height: 1.2em; background-color:# fff; color: white;font-size:1.2em ">
+							<?php echo $userid;?>
+						</div>
+						<div style="padding-left: 10px; float:left; height: 60px; width: 60px; margin-top: -27px;">
+							<?php
+
+
+							echo '<td><h4><img style="height: 60px; width: 60px;"src="../images/staff/'. $res1['profile_pic'] .'"/></h4></td>';
+						?>
+					</div>
+		</div>
+			</div>
+
+	</div>
+<div class="nav1">
     <div class="logo">
         <img src="../images/general/UCSC_logo [Converted] white.png" class="logo">
         <script src="../layout/scripts/application.js"></script>
@@ -45,7 +80,11 @@
         <ul class="submenu" style="display: none;">
 
          <li><span><a href="admin_only.php?type=update" id="menu" style="font-size: 1.2em;">Update Profile</a></span></li>
+<<<<<<< HEAD
          <li><span><a href="admin_only.php?type=updateinfo" id="menu" style="font-size: 1.2em;">Add Details</a></span></li>
+=======
+         <li><span><a href="generalinfo.php" id="menu" style="font-size: 1.2em;">Add General</a></span></li>
+>>>>>>> Monolithic commit
 
         </ul>
       <li><span><a href="admin_only.php?type=stats" id="menu">Statistics</a></span><div class="messages"></div></li>
@@ -81,7 +120,7 @@
 		<li><span><a href="addpublication.php" id="menu">Publications</a></span></li>
 		<li><span><a href="paymentstaff.php" id="menu">Payments</a></span></li>
 		<li><span><a href="reservationinternal.php" id="menu">Reservation</a></span></li>
-	  
+
       <li><span><a href="#" id="menu">Settings</a></span></li>
     </ul>
 </div>
@@ -145,7 +184,7 @@
 		else if($_GET['type'] == 'facility1'){
 				require "view_edit_facility.php";
 		}
-		
+
 
 	}
 	else{
