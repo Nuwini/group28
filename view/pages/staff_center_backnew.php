@@ -1,7 +1,11 @@
+<?php 
+include '../../model/config.php';
+include '../../controller/del.php';
+?>
+
 <html>
 <head>
-<title>UCSC | Admin Panel
-</title>
+<title>User Back-end</title>
 
 <link rel="stylesheet" type="text/css" href="../layout/styles/application/application.css">
 <script src="../layout/scripts/jquery.js"></script>
@@ -41,36 +45,27 @@
 
     <ul class="mainmenu">
 
-        <li><span><a a="" href="#" id="menu">My Account</a></span></li>
+        <li><span><a a="" href="" id="menu">My Account</a></span></li>
         <ul class="submenu" style="display: none;">
 
-         <li><span><a href="admin_only.php?type=update" id="menu" style="font-size: 1.2em;">Update Profile</a></span></li>
-         <li><span><a href="admin_only.php?type=updateinfo" id="menu" style="font-size: 1.2em;">Add Details</a></span></li>
+         <li><span><a href="staff_center_back.php?type=update" id="menu" style="font-size: 1.2em;">Updates Profile</a></span></li>
 
         </ul>
-      <li><span><a href="admin_only.php?type=stats" id="menu">Statistics</a></span><div class="messages"></div></li>
-      <li><span><a href="admin_only.php?type=dep" id="menu">Department</a></span></li>
-	  <li><span><a href="admin_only.php?type=divi" id="menu">Division</a></span></li>
-      <li><span><a href="#" id="menu">Center</a></span></li>
-        <ul class="submenu" style="display: none;">
+      <li><span><a href="staff_center_back.php?type=stats" id="menu">Statistics</a></span><div class="messages"></div></li>
+      <li><span><a href="staff_center_back.php?type=dep" id="menu">Department</a></span></li>
+	  <li><span><a href="staff_center_back.php?type=divi" id="menu">Division</a></span></li>
+      
 
-         <li><span><a href="admin_only.php?type=center">Add Center</a></span></li>
-          <li><span><a href="admin_only.php?type=center1">View & Edit Center</a></span></li>
-        </ul>
+         <li><span><a href="staff_center_back.php?type=centers"> Centers</a></span></li>
+          
 
-      <li><span><a href="#" id="menu">Facility</a></span></li>
-        <ul class="submenu" style="display: none;">
+      
+         <li><span><a href="staff_center_back.php?type=facility">Add Facility</a></span></li>
+          
+      
 
-         <li><span><a href="admin_only.php?type=facility">Add Facility</a></span></li>
-          <li><span><a href="admin_only.php?type=facility1">View & Edit Facility</a></span></li>
-        </ul>
-      <li><span><a href="#" id="menu">Course</a></span></li>
-
-      <ul class="submenu" style="display: none;">
-
-       <li><span><a href="admin_only.php?type=course">">Add Course</a></span></li>
-        <li><span><a href="admin_only.php?type=course1">View & Edit Course</a></span></li>
-      </ul>
+       <li><span><a href="staff_center_back.php?type=course">">Add Course</a></span></li>
+        
       <li><span><a href="admin_only.php?type=post" id="menu">Posts</a></span></li>
 	  <li><span><a href="#" id="menu">Achievement</a></span></li>
         <ul class="submenu" style="display: none;">
@@ -78,8 +73,8 @@
          <li><span><a href="admin_only.php?type=achievement">Add Achievement</a></span></li>
           <li><span><a href="admin_only.php?type=achievement1">View & Edit Achievement</a></span></li>
         </ul>
-		<li><span><a href="addpublication.php" id="menu">Publications</a></span></li>
-		<li><span><a href="paymentstaff.php" id="menu">Payments</a></span></li>
+		<li><span><a href="staff_center_back.php?type=publication" id="menu">Publications</a></span></li>
+		<li><span><a href="staff_center_back.php?type=payment" id="menu">Payments</a></span></li>
 		<li><span><a href="reservationinternal.php" id="menu">Reservation</a></span></li>
 	  
       <li><span><a href="#" id="menu">Settings</a></span></li>
