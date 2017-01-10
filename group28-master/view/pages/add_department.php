@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-  <title>form</title>
+  <title>Department</title>
   <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
  
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
