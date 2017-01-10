@@ -5,6 +5,7 @@
                 $name = $_POST['name'];
                 $location = $_POST['location'];
                 $head = $_POST['head'];
+				$description=$_POST['description'];
                 $telephone = $_POST['telephone'];
                 $fax= $_POST['fax'];
                 $email = $_POST['email'];
@@ -12,7 +13,7 @@
                 $image=$_POST['image'];
                 
                
-                $sql = "INSERT INTO department (dep_id,dep_name,location,dep_head,telephone,fax,email,website,image) VALUES ('$id','$name','$location','$head','$telephone','$fax','$email','$website','$image')";
+                $sql = "INSERT INTO department (dep_id,dep_name,location,dep_head,dep_description,telephone,fax,email,website,image) VALUES ('$id','$name','$location','$head','$description','$telephone','$fax','$email','$website','$image')";
 				
                 if (mysqli_query($connect, $sql)) {
                     echo '<script type="text/javascript">';
