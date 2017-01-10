@@ -1,5 +1,7 @@
 <?php 
+//include('.;C:\xampp\php\PEAR');
 include('../model/config.php');
+
 $output1 = "";
 $output2 = "";
 

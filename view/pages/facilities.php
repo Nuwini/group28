@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Facilities</title>
+  <title>UCSC | Facilities</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,36 +30,164 @@
 	  <?php
 	  $maxcols = 1;
 $i = 0;
-$all_profiles_q="SELECT description FROM facilities where facility_name='Library'";
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Library'";
 $all_profiles=mysqli_query($connect,$all_profiles_q);
 	if(!$all_profiles){
             die("Database query failed: ".mysqli_error($connect));
         }
         $record=mysqli_fetch_assoc($all_profiles);
 		echo $record['description'];
-		
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
 		
 	  ?>
       </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h3>Computer Laboratory</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Computer Laboratory'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
     </div>
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <h3>Lecture Rooms</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Lecture Rooms'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
     </div>
     <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <h3>Digital Studio</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Digital Studio'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
+    </div>
+	<div id="menu4" class="tab-pane fade">
+      <h3>New Auditorium</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='New Auditorium'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
+    </div>
+	<div id="menu5" class="tab-pane fade">
+      <h3>Cafetaria</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Cafetaria'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
+    </div>
+	<div id="menu6" class="tab-pane fade">
+      <h3>Wi-Fi & Internet</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Wi-Fi'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
+    </div>
+	<div id="menu7" class="tab-pane fade">
+      <h3>Medical Services</h3>
+	  <?php
+	  $maxcols = 1;
+$i = 0;
+$all_profiles_q="SELECT description,image FROM facilities where facility_name='Medical Services'";
+$all_profiles=mysqli_query($connect,$all_profiles_q);
+	if(!$all_profiles){
+            die("Database query failed: ".mysqli_error($connect));
+        }
+        $record=mysqli_fetch_assoc($all_profiles);
+		echo $record['description'];
+		echo "</br>";
+		echo "</br>";
+		echo "</br>";
+		echo '<img align="middle" width="30%" class="avatar img-circle" alt="avatar" src="../images/facilities/'.$record['image'].'"/>';
+		
+	  ?>
     </div>
 	<!-- <div id="menu3" class="tab-pane fade">
       <h3>Reservation</h3>
-      <?php require "calendar.php";?>
-    </div>
+        </div>
 	-->
+	<div id="menu8" class="tab-pane fade">
+      <h3>Facility Reservation</h3>
+	  <?php include('calendar.php');?>
+    </div>
   </div>
 </div>
-
+<hr>
+<?php include('../layout/styles/footer.php');?>
 </body>
 </html>

@@ -36,7 +36,7 @@ include '../../controller/del.php';
 
 	<li class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
     <a href="#" class="wp-first-item wp-has-submenu wp-has-current-submenu wp-menu-open menu-top menu-top-first menu-icon-dashboard menu-top-last" aria-haspopup="false">
-        <div class="logo"><img src="../images/demo/UCSClogopng.png" alt="logo" height="100" width="100"></div>
+        <div class="logo"><img src="../images/general/UCSClogopng.png" alt="logo" height="100" width="100"></div>
     </a>
     <ul class="wp-submenu wp-submenu-wrap">
 

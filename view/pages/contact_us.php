@@ -53,9 +53,9 @@ $all_info_q="SELECT mailing_address,telephone,fax,email FROM info";
 	echo "</br>";
     echo $contact_info['email'];
 echo "</br>";
-	
+echo "<hr>";
+?>
 
-
-include ('../layout/styles/footer.php');?>
+<?php include ('../layout/styles/footer.php');?>
 </body>
 </html>

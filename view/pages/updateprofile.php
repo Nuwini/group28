@@ -24,7 +24,11 @@ $userid = $_SESSION['login_user'];
             
                 include('../../model/config.php');
                 
-                $sql = "SELECT staff.profile_pic,staff.f_name,staff.l_name,staff.name_initials,academicemp_data.research,staff.email,staff.contact_no,staff.dep_id,staff.center_id,staff.division_id,academicemp_data.title,academicemp_data.qualifications,academicemp_data.bio,academicemp_data.academic,academicemp_data.awards,academicemp_data.activity,academicemp_data.teaching,academicemp_data.employee,academicemp_data.consultation,academicemp_data.projects,academicemp_data.facebook,academicemp_data.linkedin,academicemp_data.scholar,academicemp_data.research_gate,academicemp_data.location FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where staff.user_id='$userid'";
+                $sql = "SELECT staff.profile_pic,staff.f_name,staff.l_name,staff.name_initials,academicemp_data.research,staff.email,staff.contact_no,
+				staff.dep_id,staff.center_id,staff.division_id,academicemp_data.title,academicemp_data.qualifications,academicemp_data.bio,
+				academicemp_data.academic,academicemp_data.awards,academicemp_data.activity,academicemp_data.teaching,academicemp_data.employee,
+				academicemp_data.consultation,academicemp_data.projects,academicemp_data.facebook,academicemp_data.linkedin,academicemp_data.scholar,
+				academicemp_data.research_gate,academicemp_data.location FROM staff inner join academicemp_data on staff.user_id=academicemp_data.user_id where staff.user_id='$userid'";
 				
 				
                 $result = mysqli_query($connect, $sql);
@@ -48,7 +52,7 @@ $userid = $_SESSION['login_user'];
 	<div class="row">
       <div class="col-md-3">
         <div class="text-center">
-					  <?php echo '<img width="40%" class="avatar img-circle" alt="avatar" src="../images/demo/' . $record['profile_pic'] . '"/>' ?>
+					  <?php echo '<img width="40%" class="avatar img-circle" alt="avatar" src="../images/staff/' . $record['profile_pic'] . '"/>' ?>
           <h6>Upload a different photo...</h6>
           
           <input class="form-control" type="file" name="profile_pic">
@@ -180,8 +184,13 @@ $userid = $_SESSION['login_user'];
                                  <label for="research_gate" class="col-lg-6 control-label">Research Gate :</label><br /><br/> 
                                  <input required id="research_gate" type="text" name="research_gate" class="form-control" value="<?php echo $record['research_gate']?>" style="width:400px"></div>
                                  </td>
-								 <td><div class="form-group"><label for="location" class="col-sm-5 control-label">Location: </label><br /><br/>
-								<input class="form-control" type="file" name="location"><td>
+								 <td><div class="text-center">
+								 <label for="location" class="col-lg-5 control-label">Location :</label><br /><br/>
+					  <?php echo '<img width="40%" class="avatar img-circle" alt="avatar" src="../images/location/' . $record['location'] . '"/>' ?>
+          <h6>Upload a different photo...</h6>
+          
+          <input class="form-control" type="file" name="location">
+        </div></td>
 								</tr>
 								
 								

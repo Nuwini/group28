@@ -7,6 +7,9 @@
     <title>UCSC | Reservation Calendar</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.css" type="text/css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
 </head>
 <body>
     <div class="container">
@@ -55,10 +58,10 @@
                 events:
                 [
                     <?php
-                    $conn = mysqli_connect("localhost", "root", "", "ucsc");
+                    $connect = mysqli_connect("localhost", "root", "", "ucsc");
                     
                     $sql = "SELECT * FROM reservation";
-                    $result = mysqli_query($conn, $sql);
+                    $result = mysqli_query($connect, $sql);
                     
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {

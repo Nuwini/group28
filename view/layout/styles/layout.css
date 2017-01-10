@@ -145,3 +145,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #copyright .fl_left, #copyright .fl_right{margin:0; width:auto;}
 #copyright p{margin:0; padding:0;}
 #copyright, #copyright a{color:#C8CCCF; background-color:#949BA0;}
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }

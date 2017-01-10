@@ -43,7 +43,7 @@
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	echo "<tr>";
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -64,7 +64,7 @@
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo '<td><img src="data:image/jpeg;base64,' . base64_encode($profile_info['center_location']) . '"/></td>';
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -88,7 +88,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -109,7 +109,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -133,7 +133,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -154,7 +154,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -177,7 +177,7 @@ echo "</table>";
     
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -198,7 +198,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -222,7 +222,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -243,7 +243,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -267,7 +267,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -288,7 +288,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+		echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 
@@ -312,7 +312,7 @@ echo "</table>";
         $profile_info=mysqli_fetch_assoc($all_profiles);
 			
 	echo "<tr>";
-        echo '<td><img src="../images/demo/'. $profile_info['image'] .'"/></td>';
+        echo '<td><img src="../images/centers/'. $profile_info['image'] .'"/></td>';
 		echo "</tr>";
 		echo "<tr>";
 		echo "<td>".$profile_info['center_description']."</td>";
@@ -333,7 +333,7 @@ echo "</table>";
 		echo "<td>"."Website : ".$profile_info['website']."</td>";
 		echo "</tr>";
 		echo "<tr>";
-		echo "<td>"."Location : ".$profile_info['center_location']."</td>";
+echo '<td><img src="../images/location/'. $profile_info['center_location'] .'"/></td>';
 		echo "</tr>";
 echo "</table>";
 

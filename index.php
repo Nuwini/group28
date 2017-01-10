@@ -68,7 +68,7 @@ $(document).ready(function() {
 <div class="wrapper row2">
   <div id="header" class="clear">
     <div class="img">
-      <h1><a href="index.html"><img src="view/images/demo/logo-ucsc-1.png"/></a></h1>
+      <h1><a href="index.html"><img src="view/images/general/logo-ucsc-1.png"/></a></h1>
           </div>
     <div class="fl_right">
       <form action="view/pages/normalSearch.php" method="post" id="sitesearch">
@@ -87,19 +87,19 @@ $(document).ready(function() {
 <div class="wrapper row3">
   <div id="featured_slide_">
     <ul id="featured_slide_Content">
-      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image1'] . '"/>' ?></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/general/' . $record['image1'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Vision</h2>
           <p><?php echo $record['vision']; ?></p>
         </div>
       </li>
-      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image2'] . '"/>' ?></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/general/' . $record['image2'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Mission</h2>
           <p><?php echo $record['mission']?></p>
         </div>
       </li>
-      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/demo/' . $record['image3'] . '"/>' ?></a>
+      <li class="featured_slide_Image"><a href="#"><?php echo '<img width="20%" class="avatar img-circle" alt="avatar" src="./view/images/general/' . $record['image3'] . '"/>' ?></a>
         <div class="introtext">
           <h2>Message from the Director</h2>
           <p></p>
@@ -110,9 +110,9 @@ $(document).ready(function() {
   </div>
   <div id="hpage_featured_info" class="clear">
     <ul>
-      <li><a href="view/pages/undergraduate_studies.php"><img src="view/images/demo/undergraduate_programmes.jpg" alt="" /> <strong>Undergraduate Programmes</strong></a></li>
-      <li><a href="view/pages/postgraduate_studies.php"><img src="view/images/demo/postgraduate_programmes.jpg" alt="" /> <strong>Postgraduate Programmes</strong></a></li>
-      <li class="last"><a href="view/pages/FIT.php"><img src="view/images/demo/external.jpg" alt="" /> <strong>External and Online Programmes</strong></a></li>
+      <li><a href="view/pages/undergraduate_studies.php"><img src="view/images/general/undergraduate_programmes.jpg" alt="" /> <strong>Undergraduate Programmes</strong></a></li>
+      <li><a href="view/pages/postgraduate_studies.php"><img src="view/images/general/postgraduate_programmes.jpg" alt="" /> <strong>Postgraduate Programmes</strong></a></li>
+      <li class="last"><a href="view/pages/FIT.php"><img src="view/images/general/external.jpg" alt="" /> <strong>External and Online Programmes</strong></a></li>
     </ul>
   </div>
 </div>
@@ -123,32 +123,32 @@ $(document).ready(function() {
       <div class="fl_left">
         <ul id="hpage_latestnews">
           <li class="odd clear">
-            <div class="imgholder"><img src="view/images/demo/faq.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/faq.png" alt="" /></div>
             <a href="view/pages/faq.php">Frequently Asked Questions</a>
             <p></p>
           </li>
           <li class="even clear">
-            <div class="imgholder"><img src="view/images/demo/location.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/location.png" alt="" /></div>
             <a href="#">Research</a>
             <p></p>
           </li>
           <li class="odd clear">
-            <div class="imgholder"><img src="view/images/demo/uoc.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/uoc.png" alt="" /></div>
             <a href="http://www.cmb.ac.lk/">University of Colombo</a>
             <p></p>
           </li>
           <li class="even clear">
-            <div class="imgholder"><img src="view/images/demo/calendar.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/calendar.png" alt="" /></div>
             <a href="#">Academic Calendar</a>
             <p></p>
           </li>
           <li class="odd clear">
-            <div class="imgholder"><img src="view/images/demo/wiki.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/wiki.png" alt="" /></div>
             <a href="view/pages/resources.php">Resources</a>
             <p></p>
           </li>
           <li class="even clear">
-            <div class="imgholder"><img src="view/images/demo/tv.png" alt="" /></div>
+            <div class="imgholder"><img src="view/images/general/tv.png" alt="" /></div>
             <a href="#">UCSC TV</a>
             <p></p>
           </li>
@@ -156,7 +156,7 @@ $(document).ready(function() {
       </div>
       <div class="fl_right">
         <h2></h2>
-        <img src="view/images/demo/virtual.png" alt="" />
+        <img src="view/images/general/virtual.png" alt="" />
         <p></p>
         <p class="readmore"><a href="#">Virtual Tour &raquo;</a></p>
       </div>
@@ -225,7 +225,7 @@ $(document).ready(function() {
   <div id="footer" class="clear"> 
     <!-- ####################################################################################################### -->
     <div class="fl_left clear">
-      <div class="fl_left center"><img src="view/images/demo/google.png" alt="" /><br />
+      <div class="fl_left center"><img src="view/images/general/google.png" alt="" /><br />
         <a href="#">Find Us With Google Maps &raquo;</a></div>
       <address>
       University of Colombo School of Computing<br />

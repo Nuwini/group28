@@ -51,14 +51,14 @@ if (!$result) {
       </div>
       <div class="holder">
         <h2 class="title">CONFERENCES AND SYMPOSIUMS</h2>
-        <div class="imgholder"><a href="conferences_and_sysmposiums.php"><img src="../images/demo/icter.png" alt="" /></a></div>
-        <div class="imgholder last"><a href="conferences_and_sysmposiums.php"><img src="../images/demo/symposium.png" alt="" /></a></div>
+        <div class="imgholder"><a href="conferences_and_sysmposiums.php"><img src="../images/general/icter.png" alt="" /></a></div>
+        <div class="imgholder last"><a href="conferences_and_sysmposiums.php"><img src="../images/general/symposium.png" alt="" /></a></div>
       </div>
     </div>
     <!-- ############ -->
     <div id="content">
       <h1 class="title">University of Colombo School of Computing</h1>
-      <div class="imgholder"><img src="../images/demo/ucsc.png" alt="" /></div>
+      <div class="imgholder"><img src="../images/general/ucsc.png" alt="" /></div>
       <p><?php echo $record['ucsc_description']?></p>
 
 	  <h2 class="title">Abbreviations</h2>
@@ -85,9 +85,9 @@ if (!$result) {
       </div>
       <div class="holder">
         <h2 class="title">INFRASTRUCTURE AND SERVICES</h2>
-        <div class="imgholder"><a href="infrastructure_and_services.html"><img src="../images/demo/library.png" alt="" /></a></div>
-        <div class="imgholder"><a href="infrastructure_and_services.html"><img src="../images/demo/lecture.png" alt="" /></a></div>
-        <div class="imgholder last"><a href="infrastructure_and_services.html"><img src="../images/demo/labs.png" alt="" /></a></div>
+        <div class="imgholder"><a href="infrastructure_and_services.html"><img src="../images/general/library.png" alt="" /></a></div>
+        <div class="imgholder"><a href="infrastructure_and_services.html"><img src="../images/general/lecture.png" alt="" /></a></div>
+        <div class="imgholder last"><a href="infrastructure_and_services.html"><img src="../images/general/labs.png" alt="" /></a></div>
       </div>
     </div>
     <!-- ####################################################################################################### --> 

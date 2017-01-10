@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id="background">
-    <img src="../images/demo/back.png" class="stretch" alt="" />
+    <img src="../images/general/back.png" class="stretch" alt="" />
     </div>
 	<section class="loginform cf">
 		<form name="login" action="../../controller/login.php" method="post" accept-charset="utf-8">

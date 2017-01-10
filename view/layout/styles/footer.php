@@ -77,7 +77,7 @@ if (!$result1) {
   <div id="footer" class="clear"> 
     <!-- ####################################################################################################### -->
     <div class="fl_left clear">
-      <div class="fl_left center"><img src="../images/demo/google.png" alt="" /><br />
+      <div class="fl_left center"><img src="../images/general/google.png" alt="" /><br />
         <a href="#">Find Us With Google Maps &raquo;</a></div>
       <address>
       University of Colombo School of Computing<br />
